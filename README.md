@@ -1,16 +1,15 @@
-### Hi there 👋
+# Overview
 
-<!--
-**rowaxl/rowaxl** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+## Name
+- Wonjae Kim(rowaxl)
 
-Here are some ideas to get you started:
+## Location
+- Vancouver, BC(PDT)
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+## Current position
+- Parttime Student of CICCC
+
+## Skills
+- React / Vue.js
+- Node.js
+- AWS / Azure
