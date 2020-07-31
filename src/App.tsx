@@ -9,7 +9,7 @@ import Contact from './pages/Contact'
 
 function App() {
   return (
-    <div className="container">
+    <div>
       <BrowserRouter>
         <Toolbar />
 
@@ -25,8 +25,6 @@ function App() {
             </Switch>
           )
         }} />
-        
-
 
       </BrowserRouter>
 
