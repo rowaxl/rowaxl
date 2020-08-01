@@ -22,8 +22,8 @@
     "start": "yarn watch:css && react-scripts start",
     "build": "yarn build:css && react-scripts build",
     "test": "react-scripts test",
-    "build:css": "postcss src/tailwind.css -o src/assets/main.css",
-    "watch:css": "postcss src/tailwind.css -o src/assets/main.css"
+    "build:css": "postcss src/tailwind.css -o src/assets/css/main.css",
+    "watch:css": "postcss src/tailwind.css -o src/assets/css/main.css"
   },
   "eslintConfig": {
     "extends": "react-app"

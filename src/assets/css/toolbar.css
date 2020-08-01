@@ -1,0 +1,20 @@
+.link-text {
+  color: #000;
+  border-color: #fff;
+  transition: color ease-in-out 0.3s;
+  transition: border-color ease-in-out 0.3s;
+}
+
+.link-text.current-path {
+  color: #2f73b1;
+  border-color: #2f73b1;
+  transition: color ease-in-out 0.3s;
+  transition: border-color ease-in-out 0.3s;
+}
+
+.link-text:hover,
+.link-text.current-path:hover {
+  color: #559ada;
+  border-color: #559ada;
+}
+
