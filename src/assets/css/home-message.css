@@ -1,0 +1,46 @@
+.message {
+  font-weight: 900;
+}
+
+.message.to-community {
+  color: #47b554;
+}
+
+.message.to-business {
+  color: #4156d2
+}
+
+.message.to-you {
+  color: #d83a3a
+}
+
+.home-message-wrap {
+  width: 100%;
+  min-height: 540px;
+  height: 50vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  position: relative;
+}
+
+.home-message-wrap h1 {
+  font-size: 2em;
+}
+
+.home-message-wrap h3 {
+  font-size: 1.7em;
+}
+
+.home-image {
+  width: auto;
+  height: 600px;
+  mask-image: linear-gradient(to top, transparent 25%, red 75% );
+  -webkit-mask-image: linear-gradient(to top, transparent 25%, red 75% );
+}
+
+.message-wrap {
+  position: absolute;
+  bottom: 10%;
+  left: 10%;
+}
