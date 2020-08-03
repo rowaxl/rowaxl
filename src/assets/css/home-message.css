@@ -32,15 +32,34 @@
   font-size: 1.7em;
 }
 
-.home-image {
-  width: auto;
-  height: 600px;
-  mask-image: linear-gradient(to top, transparent 25%, red 75% );
-  -webkit-mask-image: linear-gradient(to top, transparent 25%, red 75% );
-}
-
 .message-wrap {
   position: absolute;
   bottom: 10%;
   left: 10%;
+}
+
+.home-image {
+  width: 100%;
+  height: 700px;
+  mask-image: linear-gradient(to top, transparent 25%, red 75% );
+  -webkit-mask-image: linear-gradient(to top, transparent 25%, red 75% );
+  position: absolute;
+  top:0;
+  left:0;
+}
+
+/* home-image animation*/
+.slide-enter {
+  transform: translateX(100%);
+}
+.slide-enter-active {
+  transform: translateX(0%);
+  transition: transform 1000ms ease-in-out;
+}
+.slide-exit {
+  transform: translateX(0%);
+}
+.slide-exit-active {
+  transform: translateX(-100%);
+  transition: transform 1000ms ease-in-out;
 }

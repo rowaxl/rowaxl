@@ -1,5 +1,6 @@
 import React, { FunctionComponent, useState, useEffect, useMemo } from 'react'
 import TextLoop from 'react-text-loop'
+import { TransitionGroup, CSSTransition } from 'react-transition-group'
 import '../assets/css/home-message.css'
 
 type MessageLabels = {
@@ -58,6 +59,7 @@ let i = 0;
 
 export const HomeMessage: FunctionComponent = () => {
   const [target, setTarget] = useState<Targets>('community')
+
   useEffect(() => {
     const changeTarget = setInterval(() => {
       if (i >= targets.length - 1) {
@@ -67,7 +69,7 @@ export const HomeMessage: FunctionComponent = () => {
       }
 
       setTarget(targets[i])
-    }, 2600)
+    }, 3000)
     return () => clearInterval(changeTarget)
   }, [])
 
@@ -85,8 +87,15 @@ export const HomeMessage: FunctionComponent = () => {
 
   return (
     <div className="home-message-wrap">
-      {/* TODO: Set transition group */}
-      <img src={require('../assets/img/' + imageDetail.file)} className="home-image" alt={imageDetail.file} />
+      <TransitionGroup>
+        <CSSTransition
+          classNames="slide"
+          timeout={{ enter: 3000, exit: 3000 }}
+          key={imageDetail.file}
+        >
+          <img src={require('../assets/img/' + imageDetail.file)} className="home-image" alt={imageDetail.file} />
+        </CSSTransition>
+      </TransitionGroup>
 
       <div className="message-wrap">
         <h1>What {renderTargets(weLabels)}B can do for {renderTargets(targetLabels)}{" "} ?</h1>
