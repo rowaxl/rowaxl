@@ -22,11 +22,13 @@
     "typescript": "~3.7.2"
   },
   "scripts": {
-    "start": "yarn watch:css && react-scripts start",
+    "start": "concurrently yarn:start:*",
+    "start:react": "react-scripts start",
+    "start:sass": "sass --watch src/styles/main.scss src/assets/css/main.css",
+    "start:tailwind": "postcss src/styles/tailwind.css -o src/assets/css/tailwind.css",
     "build": "yarn build:css && react-scripts build",
-    "test": "react-scripts test",
-    "build:css": "postcss src/tailwind.css -o src/assets/css/main.css",
-    "watch:css": "postcss src/tailwind.css -o src/assets/css/main.css"
+    "build:css": "postcss src/styles/tailwind.css -o src/assets/css/tailwind.css && sass src/styles/main.scss src/assets/css/main.css",
+    "test": "react-scripts test"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -42,5 +44,9 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "concurrently": "^5.2.0",
+    "postcss-scss": "^2.1.1"
   }
 }

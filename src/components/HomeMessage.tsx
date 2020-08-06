@@ -1,7 +1,6 @@
 import React, { FunctionComponent, useState, useEffect, useMemo } from 'react'
 import TextLoop from 'react-text-loop'
 import { TransitionGroup, CSSTransition } from 'react-transition-group'
-import '../assets/css/home-message.css'
 
 type MessageLabels = {
   text: string;
@@ -74,7 +73,7 @@ export const HomeMessage: FunctionComponent = () => {
   }, [])
 
   const renderTargets = (labels: MessageLabels[]) => (
-    <TextLoop springConfig={{ stiffness: 200, damping: 50 }} adjustingSpeed={200}>
+    <TextLoop springConfig={{ stiffness: 150, damping: 30 }} interval={3000}>
       {
         labels.map(label => 
           <span key={label.text} className={`message to-${label.colorClass}`}>{label.text.toUpperCase()}</span>
@@ -87,6 +86,11 @@ export const HomeMessage: FunctionComponent = () => {
 
   return (
     <div className="home-message-wrap">
+      <div className="greeting-message">
+        <h1>Hello,  My name is Wonjae Kim!</h1>
+        <h3>I'm a web developer!</h3>
+      </div>
+
       <TransitionGroup>
         <CSSTransition
           classNames="slide"

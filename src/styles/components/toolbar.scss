@@ -1,0 +1,21 @@
+$primary: #2f73b1;
+$primary-light: #559ada;
+
+.link-text {
+  color: #000;
+  border-color: #fff;
+  transition: color ease-in-out 0.3s;
+  transition: border-color ease-in-out 0.3s;
+
+  &.current-path {
+    color: $primary;
+    border-color: $primary;
+  }
+}
+
+.link-text:hover,
+.link-text.current-path:hover {
+  color: $primary-light;
+  border-color: $primary-light;
+}
+
