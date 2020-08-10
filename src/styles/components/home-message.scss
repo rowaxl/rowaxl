@@ -3,9 +3,7 @@
 }
 
 .greeting-message {
-  position: absolute;
-  top: 10%;
-  left: 25%;
+  margin: auto;
   z-index: 1000;
   color: #2f73b1;
   width: fit-content;
@@ -27,7 +25,7 @@
   color: #4156d2
 }
 
-.message.to-you {
+.message.to-us {
   color: #d83a3a
 }
 

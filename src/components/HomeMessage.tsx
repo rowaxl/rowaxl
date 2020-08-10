@@ -15,18 +15,18 @@ type PhotoDetail = {
   }
 }
 
-type Targets = 'community' | 'business' | 'you'
+type Targets = 'community' | 'business' | 'us'
 
 const weLabels: MessageLabels[] = [
   { text: 'we', colorClass: 'community' },
   { text: 'we', colorClass: 'business' },
-  { text: 'we', colorClass: 'you' },
+  { text: 'we', colorClass: 'us' },
 ]
 
 const targetLabels: MessageLabels[] = [
   { text: 'community', colorClass: 'community' },
   { text: 'bussiness', colorClass: 'business' },
-  { text: 'you', colorClass: 'you' },
+  { text: 'us', colorClass: 'us' },
 ]
 
 const photoes: {[key in Targets]: PhotoDetail } = {
@@ -44,8 +44,8 @@ const photoes: {[key in Targets]: PhotoDetail } = {
       url: 'https://unsplash.com/@kmuza'
     }
   },
-  'you': {
-    file: 'you.jpg',
+  'us': {
+    file: 'us.jpg',
     photoby: {
       name: 'Austin Schmid',
       url: 'https://unsplash.com/@schmidy'
@@ -53,7 +53,7 @@ const photoes: {[key in Targets]: PhotoDetail } = {
   }
 }
 
-const targets:Targets[] = ['community', 'business', 'you']
+const targets:Targets[] = ['community', 'business', 'us']
 let i = 0;
 
 export const HomeMessage: FunctionComponent = () => {
@@ -87,8 +87,8 @@ export const HomeMessage: FunctionComponent = () => {
   return (
     <div className="home-message-wrap">
       <div className="greeting-message">
-        <h1>Hello,  My name is Wonjae Kim!</h1>
-        <h3>I'm a web developer!</h3>
+        <h1>Hello, I'm Walther Kim.</h1>
+        <h3>I make front-end web applications!</h3>
       </div>
 
       <TransitionGroup>
