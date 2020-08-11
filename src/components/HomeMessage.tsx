@@ -97,7 +97,7 @@ export const HomeMessage: FunctionComponent = () => {
           timeout={{ enter: 3000, exit: 3000 }}
           key={imageDetail.file}
         >
-          <img src={require('../assets/img/' + imageDetail.file)} className="home-image" alt={imageDetail.file} />
+          <img src={`${process.env.PUBLIC_URL}/img/${imageDetail.file}`} className="home-image" alt={imageDetail.file} />
         </CSSTransition>
       </TransitionGroup>
 

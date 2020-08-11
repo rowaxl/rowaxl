@@ -6,7 +6,7 @@
   .float-button {
     position: absolute;
     bottom: 10px;
-    left: 30%;
+    left: 35%;
     transition: all 300ms ease-in;
   }
 }
@@ -28,12 +28,18 @@
   }
 
   h5 {
-    font-size: 1.2em;
+    font-size: 1.4em;
     white-space: nowrap;
     overflow: hidden;
     width: 0;
     animation: type 2s steps(60, end);
     animation-fill-mode: forwards;
+  }
+
+  @media only screen and (max-width: 1024px) {
+    h5 {
+      font-size: 1.1em;
+    }
   }
 
   h5:nth-child(2) {
@@ -51,10 +57,6 @@
   h5:nth-child(5) {
     animation-delay: 8s;
   }
-}
-
-.about-col-wrap {
-  min-height: 550px;
 }
 
 @keyframes type { 

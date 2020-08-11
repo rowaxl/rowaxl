@@ -22,7 +22,7 @@ function App() {
               <CSSTransition
                 key={key}
                 classNames={'fade'}
-                timeout={{ enter: 300, exit: 50 }}
+                timeout={{ enter: 1000, exit: 300 }}
               >
                 <section className="route-seciton">
                   <Switch location={location}>

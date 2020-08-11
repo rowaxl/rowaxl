@@ -1,7 +1,6 @@
 .app-wrap {
   background: #f3f7fc;
   height: 100vh;
-  overflow: hidden;
 }
 
 div.transition-group {
@@ -11,7 +10,6 @@ div.transition-group {
 section.route-seciton {
   position: absolute;
   width: 100%;
-  height: 100vh;
   top: 0;
   left: 0;
 }
@@ -32,6 +30,14 @@ section.route-seciton {
 .fade-exit.fade-exit-active {
   opacity: 0.01;
   transition: opacity 300ms ease-in;
+}
+
+.about-col-wrap {
+  height: 70vh;
+  min-height: 550px;
+}
+.about-col-wrap h3 {
+  font-size: 1.8em;
 }
 
 .message {
@@ -151,7 +157,7 @@ section.route-seciton {
 .photo-card-wrap .float-button {
   position: absolute;
   bottom: 10px;
-  left: 30%;
+  left: 35%;
   transition: all 300ms ease-in;
 }
 
@@ -170,12 +176,17 @@ section.route-seciton {
   background-color: transparent;
 }
 .overlay h5 {
-  font-size: 1.2em;
+  font-size: 1.4em;
   white-space: nowrap;
   overflow: hidden;
   width: 0;
   animation: type 2s steps(60, end);
   animation-fill-mode: forwards;
+}
+@media only screen and (max-width: 1024px) {
+  .overlay h5 {
+    font-size: 1.1em;
+  }
 }
 .overlay h5:nth-child(2) {
   animation-delay: 2s;
@@ -188,10 +199,6 @@ section.route-seciton {
 }
 .overlay h5:nth-child(5) {
   animation-delay: 8s;
-}
-
-.about-col-wrap {
-  min-height: 550px;
 }
 
 @keyframes type {
