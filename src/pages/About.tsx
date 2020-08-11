@@ -96,7 +96,10 @@ export default () => {
             hideButtonText="Hide Details"
           >
             <h5>
-              Started career in Tokyo, Japan 3 years.
+              Started career as web developer in Tokyo, Japan.
+            </h5>
+            <h5>
+              3 years of experience in javascript development.
             </h5>
             <h5>
               Currently based on Vancouver, Canada.
