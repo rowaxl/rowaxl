@@ -1,3 +1,39 @@
+.app-wrap {
+  background: #f3f7fc;
+  height: 100vh;
+  overflow: hidden;
+}
+
+div.transition-group {
+  position: relative;
+}
+
+section.route-seciton {
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  left: 0;
+}
+
+.fade-enter {
+  opacity: 0.01;
+}
+
+.fade-enter.fade-enter-active {
+  opacity: 1;
+  transition: opacity 300ms ease-in;
+}
+
+.fade-exit {
+  opacity: 1;
+}
+
+.fade-exit.fade-exit-active {
+  opacity: 0.01;
+  transition: opacity 300ms ease-in;
+}
+
 .message {
   font-weight: 900;
 }
@@ -65,21 +101,24 @@
 /* home-image animation*/
 .slide-enter {
   transform: translateX(100%);
+  opacity: 0.01;
 }
 
 .slide-enter-active {
   transform: translateX(0%);
-  transition: transform 1000ms ease-in-out;
+  opacity: 1;
+  transition: all 1000ms ease-in-out;
 }
 
 .slide-exit {
   transform: translateX(0%);
-  opacity: 0;
+  opacity: 1;
 }
 
 .slide-exit-active {
   transform: translateX(-100%);
-  transition: transform 1000ms ease-in-out;
+  opacity: 0.01;
+  transition: all 1000ms ease-in-out;
 }
 
 .link-text {
@@ -104,33 +143,64 @@
   min-height: 600px;
 }
 
-div.transition-group {
+.photo-card-wrap {
   position: relative;
+  width: fit-content;
+  height: 100%;
+}
+.photo-card-wrap .float-button {
+  position: absolute;
+  bottom: 10px;
+  left: 30%;
+  transition: all 300ms ease-in;
 }
 
-section.route-section {
+.overlay {
   position: absolute;
   width: 100%;
-  top: 0;
-  left: 0;
+  height: 100%;
+  transition: background-color 200ms ease-in;
+  padding: 15px;
+  color: #fff;
+}
+.overlay.show {
+  background-color: rgba(8, 36, 84, 0.7);
+}
+.overlay.hide {
+  background-color: transparent;
+}
+.overlay h5 {
+  font-size: 1.2em;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 0;
+  animation: type 2s steps(60, end);
+  animation-fill-mode: forwards;
+}
+.overlay h5:nth-child(2) {
+  animation-delay: 2s;
+}
+.overlay h5:nth-child(3) {
+  animation-delay: 4s;
+}
+.overlay h5:nth-child(4) {
+  animation-delay: 6s;
+}
+.overlay h5:nth-child(5) {
+  animation-delay: 8s;
 }
 
-.fade-enter {
-  opacity: 0.01;
+.about-col-wrap {
+  min-height: 550px;
 }
 
-.fade-enter.fade-enter-active {
-  opacity: 1;
-  transition: opacity 300ms ease-in;
-}
-
-.fade-exit {
-  opacity: 1;
-}
-
-.fade-exit.fade-exit-active {
-  opacity: 0.01;
-  transition: opacity 300ms ease-in;
+@keyframes type {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */

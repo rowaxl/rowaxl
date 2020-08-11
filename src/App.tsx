@@ -10,7 +10,7 @@ import { TransitionGroup, CSSTransition } from 'react-transition-group'
 
 function App() {
   return (
-    <div>
+    <div className="app-wrap">
       <BrowserRouter>
         <Toolbar />
 
@@ -38,10 +38,6 @@ function App() {
         }} />
 
       </BrowserRouter>
-
-      <div>
-        this should be footer
-      </div>
     </div>
   );
 }
