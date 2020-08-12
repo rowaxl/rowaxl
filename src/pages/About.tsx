@@ -72,19 +72,21 @@ export default () => {
     }
 
     return skills.map(s =>
-      <SkillList
-        key={s.title}
-        skillLabel={s.title}
-        iconSrc={s.iconSrc}
-        iconAlt={s.iconAlt}
-        projectCount={s.count}
-      />)
+      <div key={s.title}>
+        <SkillList
+          skillLabel={s.title}
+          iconSrc={s.iconSrc}
+          iconAlt={s.iconAlt}
+          projectCount={s.count}
+        />
+        <hr className="boder-b-0 my-4" />
+      </div>)
   }
 
   return (
     <Container>
       <p className="text-4xl mx-12">
-        About Walther Kim
+        About me
       </p>
 
       <div className="flex flex-wrap m-12 about-col-wrap">
@@ -119,7 +121,6 @@ export default () => {
           </div>
           <hr className="mx-auto"/>
           {renderSkillsets()}
-          
         </div>
       </div>
     </Container>

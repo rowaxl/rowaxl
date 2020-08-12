@@ -40,6 +40,22 @@ section.route-seciton {
   font-size: 1.8em;
 }
 
+.button-sns {
+  width: 140px;
+}
+.button-sns.linkedin {
+  background-color: #2868b1;
+  box-shadow: #15375e 4px 4px;
+}
+.button-sns.github {
+  background-color: #646464;
+  box-shadow: #313131 4px 4px;
+}
+.button-sns.twitter {
+  background-color: #1ea1f1;
+  box-shadow: #0a679f 4px 4px;
+}
+
 .message {
   font-weight: 900;
 }

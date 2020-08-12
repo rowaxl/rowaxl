@@ -1,0 +1,22 @@
+$linkedin_button: rgb(40, 104, 177);
+$github_button: rgb(100, 100, 100);
+$twitter_button: rgb(30, 161, 241);
+
+.button-sns {
+  width: 140px;
+
+  &.linkedin {
+    background-color: $linkedin_button;
+    box-shadow: darken($color: $linkedin_button, $amount: 20) 4px 4px;
+  }
+
+  &.github {
+    background-color: $github_button;
+    box-shadow: darken($color: $github_button, $amount: 20) 4px 4px;
+  }
+
+  &.twitter {
+    background-color: $twitter_button;
+    box-shadow: darken($color: $twitter_button, $amount: 20) 4px 4px;
+  }
+}
