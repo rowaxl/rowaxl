@@ -1,4 +1,6 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
+import { TransitionGroup, CSSTransition } from 'react-transition-group'
+
 import { Container } from '../components/Container'
 import { PhotoCard } from '../components/PhotoCard'
 import { SkillList } from '../components/SkillList'
@@ -64,24 +66,19 @@ const skillLists: SkillItem[] = [
 
 export default () => {
   // eslint-disable-next-line
-  const [skills, _] = useState(skillLists)
+  const [skills, setSkills] = useState<SkillItem[]>([])
 
-  const renderSkillsets = () => {
-    if (skills.length < 1) {
-      return
+  useEffect(() => {
+    const renderSkillsets = () => {
+      if (skillLists.length < 1) return
+
+      setSkills(skills.concat(skillLists.shift() as SkillItem))
     }
 
-    return skills.map(s =>
-      <div key={s.title}>
-        <SkillList
-          skillLabel={s.title}
-          iconSrc={s.iconSrc}
-          iconAlt={s.iconAlt}
-          projectCount={s.count}
-        />
-        <hr className="boder-b-0 my-4" />
-      </div>)
-  }
+    const interval = setInterval(renderSkillsets, 300)
+
+    return () => clearInterval(interval)
+  }, [skills])
 
   return (
     <Container>
@@ -119,8 +116,25 @@ export default () => {
           <div className="border-l-4 border-blue-600 -ml-6 pl-6 flex items-center justify-between my-4">
               <p className="text-2xl font-semibold text-gray-800">Skill Set</p>
           </div>
-          <hr className="mx-auto"/>
-          {renderSkillsets()}
+          <hr className="mx-auto" />
+          <TransitionGroup>
+                {
+                skills.map(s =>
+                  <CSSTransition
+                    classNames="skills-slide"
+                    timeout={500}
+                    in={true}
+                    
+                    key={s.title}>
+                      <SkillList
+                        skillLabel={s.title}
+                        iconSrc={s.iconSrc}
+                        iconAlt={s.iconAlt}
+                        projectCount={s.count}
+                      />
+                  </CSSTransition>
+                )}
+          </TransitionGroup>
         </div>
       </div>
     </Container>

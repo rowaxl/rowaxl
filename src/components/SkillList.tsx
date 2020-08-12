@@ -10,8 +10,11 @@ type SkillListProps = {
 
 export const SkillList: FunctionComponent<SkillListProps> = ({ skillLabel, iconSrc, iconAlt, projectCount }) => {
   return (
-    <ListItem label={skillLabel} iconSrc={iconSrc} iconAlt={iconAlt}>
-      <div className="text-blue-400">{projectCount} projects</div>
-    </ListItem>
+    <div>
+      <ListItem label={skillLabel} iconSrc={iconSrc} iconAlt={iconAlt}>
+        <div className="text-blue-400">{projectCount} projects</div>
+      </ListItem>
+      <hr className="boder-b-0 my-4" />
+    </div>
   );
 }
