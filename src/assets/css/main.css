@@ -63,18 +63,69 @@ section.route-seciton {
 
 .button-sns {
   width: 140px;
+  transition: all 100ms ease-in;
 }
 .button-sns.linkedin {
   background-color: #2868b1;
-  box-shadow: #15375e 4px 4px;
+  box-shadow: #15375e 4px 4px 5px;
+}
+.button-sns.linkedin:hover {
+  background-color: #639cdc;
+}
+.button-sns.linkedin:active {
+  background-color: #15375e;
+  transform: translateX(4px) translateY(4px);
+  box-shadow: none;
 }
 .button-sns.github {
   background-color: #646464;
-  box-shadow: #313131 4px 4px;
+  box-shadow: #313131 4px 4px 5px;
+}
+.button-sns.github:hover {
+  background-color: #979797;
+}
+.button-sns.github:active {
+  background-color: #313131;
+  transform: translateX(4px) translateY(4px);
+  box-shadow: none;
 }
 .button-sns.twitter {
   background-color: #1ea1f1;
-  box-shadow: #0a679f 4px 4px;
+  box-shadow: #0a679f 4px 4px 5px;
+}
+.button-sns.twitter:hover {
+  background-color: #7ec9f7;
+}
+.button-sns.twitter:active {
+  background-color: #0a679f;
+  transform: translateX(4px) translateY(4px);
+  box-shadow: none;
+}
+
+button.button-contact-form {
+  width: 80px;
+  transition: all 100ms ease-in;
+}
+button.button-contact-form.button-submit {
+  box-shadow: #1a65a3 4px 4px 5px;
+}
+button.button-contact-form.button-submit:active {
+  background-color: #1a65a3;
+  transform: translateX(4px) translateY(4px);
+  box-shadow: none;
+}
+button.button-contact-form.button-clear {
+  box-shadow: #444e5d 4px 4px 5px;
+}
+button.button-contact-form.button-clear:active {
+  background-color: #444e5d;
+  transform: translateX(4px) translateY(4px);
+  box-shadow: none;
+}
+
+textarea.contact-description {
+  resize: none;
+  overflow-y: scroll;
 }
 
 .message {
