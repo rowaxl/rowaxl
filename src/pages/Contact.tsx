@@ -66,9 +66,9 @@ export default () => {
   const [formValid, setFormValid] = useState(initialFormValid)
   const updateValid = useCallback((newValid) => {
     console.log(newValid)
-    return setFormValid({
+    setFormValid({
       ...formValid, ...newValid
-      })
+    })
   }, [formValid, setFormValid])
 
   const renderSNS = () => snsList.map(contact =>
@@ -109,6 +109,8 @@ export default () => {
           onChange={onChange}
           placeholder={placeholder[type]}
         />
+
+        {renderErrorMessage(type)}
       </div>
     )
   }
@@ -122,10 +124,12 @@ export default () => {
         placeholder={placeholder['description']}
         onChange={onChangeDescription}
       />
+
+      {renderErrorMessage('description')}
     </div>
   )
 
-  const isValid = (type: keyof ContactForm) => formValid[type] ? 'bg-blue-200 border-blue-600' : 'bg-red-200 border-red-600 error'
+  const isValid = (type: keyof ContactForm) => formValid[type] ? 'bg-blue-100 border-blue-600' : 'bg-red-200 border-red-600 error'
 
   const onChangeEmail = (event: ChangeEvent<HTMLInputElement>) => {
     const input = event.target.value
@@ -179,13 +183,42 @@ export default () => {
       }
     )
 
-    if (isFormValid) {
-      // TODO: show confirm dialog and send mail
+    if (!isFormValid) {
+      updateValid({
+        fullName: validate('fullName', formData['fullName']),
+        emailAddress: validate('emailAddress', formData['emailAddress']),
+        description: validate('description', formData['description'])
+      })
+      return
     }
+    // TODO: show confirm dialog and send mail
   }
 
   const resetContactForm = () => {
     setFormData(initialFormData)
+  }
+
+  const renderErrorMessage = (type: keyof ContactForm) => {
+    if (formValid[type])
+      return
+
+    let message = 'Please enter valid '
+
+    switch (type) {
+      case 'fullName':
+        message += 'full name'
+        break;
+      case 'emailAddress':
+        message += 'e-mail address'
+        break
+      case 'description':
+        message += 'description'
+        break
+    }
+
+    return (
+      <p className="text-red-600 mb-4">{message}</p>
+    )
   }
 
   return (

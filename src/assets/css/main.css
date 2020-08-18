@@ -224,6 +224,7 @@ textarea.contact-description {
 .link-text.current-path {
   color: #2f73b1;
   border-color: #2f73b1;
+  pointer-events: none;
 }
 
 .link-text:hover,

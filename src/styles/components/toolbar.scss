@@ -10,6 +10,7 @@ $primary-light: #559ada;
   &.current-path {
     color: $primary;
     border-color: $primary;
+    pointer-events: none;
   }
 }
 
