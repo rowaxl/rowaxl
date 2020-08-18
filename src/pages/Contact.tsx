@@ -1,7 +1,9 @@
 import React, { useState, ChangeEvent, MouseEvent, useCallback } from 'react';
 
 import { Container } from '../components/Container'
+import { ConfirmModal } from '../components/ConfrimModal'
 import { validate } from '../libs/utils'
+import { sendEmail } from '../libs/email'
 
 type SNSType = {
   type: string,
@@ -14,6 +16,11 @@ type ContactForm = {
   fullName: string,
   emailAddress: string,
   description: string,
+}
+
+type ModalProps = {
+  title: string,
+  onAction: null | ((event: MouseEvent<HTMLButtonElement>) => void)
 }
 
 const initialFormData: ContactForm = {
@@ -65,11 +72,59 @@ export default () => {
   const [formData, setFormData] = useState<ContactForm>(initialFormData)
   const [formValid, setFormValid] = useState(initialFormValid)
   const updateValid = useCallback((newValid) => {
-    console.log(newValid)
     setFormValid({
       ...formValid, ...newValid
     })
   }, [formValid, setFormValid])
+
+
+  const [showModal, setShowModal] = useState(false)
+
+  const closeModal = () => {
+    setShowModal(false)
+  }
+
+  const handleSendEmail = async (event: MouseEvent) => {
+    event.preventDefault()
+
+    setShowModal(false)
+
+    const sendResult = await sendEmail(formData)
+
+    if (!sendResult) {
+      setModalProps({
+        title: 'Failed to send e-mail. Try again later!',
+        onAction: null,
+      })
+
+      setShowModal(true)
+
+      return
+    }
+
+    resetContactForm()
+
+    setModalProps({
+      title: 'Success to send e-mail!',
+      onAction: null,
+    })
+
+    setShowModal(true)
+  }
+
+  const [modalProps, setModalProps] = useState<ModalProps>({
+    title: '',
+    onAction: handleSendEmail
+  })
+
+  const openConfirmModal = () => {
+    setModalProps({
+      title: 'Are you sure to send the e-mail?',
+      onAction: handleSendEmail
+    })
+
+    setShowModal(true)
+  }
 
   const renderSNS = () => snsList.map(contact =>
     <button className={`button-sns ${contact.type} mx-4 py-2 px-4 rounded`} key={contact.type}>
@@ -81,6 +136,29 @@ export default () => {
       </a>
     </button>
   )
+
+  const renderErrorMessage = (type: keyof ContactForm) => {
+    if (formValid[type])
+      return
+
+    let message = 'Please enter valid '
+
+    switch (type) {
+      case 'fullName':
+        message += 'full name'
+        break;
+      case 'emailAddress':
+        message += 'e-mail address'
+        break
+      case 'description':
+        message += 'description'
+        break
+    }
+
+    return (
+      <p className="text-red-600 mb-4">{message}</p>
+    )
+  }
 
   const renderForm = (type: keyof ContactForm) => {
     let onChange
@@ -191,38 +269,18 @@ export default () => {
       })
       return
     }
-    // TODO: show confirm dialog and send mail
+
+    openConfirmModal()
   }
 
   const resetContactForm = () => {
     setFormData(initialFormData)
   }
 
-  const renderErrorMessage = (type: keyof ContactForm) => {
-    if (formValid[type])
-      return
-
-    let message = 'Please enter valid '
-
-    switch (type) {
-      case 'fullName':
-        message += 'full name'
-        break;
-      case 'emailAddress':
-        message += 'e-mail address'
-        break
-      case 'description':
-        message += 'description'
-        break
-    }
-
-    return (
-      <p className="text-red-600 mb-4">{message}</p>
-    )
-  }
-
   return (
     <Container>
+      <ConfirmModal show={showModal} title={modalProps.title} onAction={modalProps.onAction} onClose={closeModal} />
+
       <p className="text-4xl mx-12">
         Contact
       </p>
@@ -256,6 +314,7 @@ export default () => {
               </button>
             </div>
           </form>
+
         </div>
         <div className="w-full px-6 bg-gray-100 rounded">
           <p className="text-xl my-4">

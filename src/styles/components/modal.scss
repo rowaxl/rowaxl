@@ -1,0 +1,12 @@
+.modal {
+  transition: opacity 200ms ease-in;
+
+  .modal-overlay {
+    z-index: 1999;
+  }
+
+  .modal-container {
+    z-index: 2000;
+  }
+}
+
