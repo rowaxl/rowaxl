@@ -10,17 +10,17 @@ type PhotoCardProps = {
 export const PhotoCard: FunctionComponent<PhotoCardProps> =
   ({ src, alt, showButtonText, hideButtonText, children }) => {
 
-  const [showProfile, setShowProfile] = useState(false)
-  const toggleShowProfile = () => setShowProfile(!showProfile)
+  const [showChildren, setShowChildren] = useState(false)
+  const toggleShowChildren = () => setShowChildren(!showChildren)
 
-  const showOverlay = () => "overlay " + (showProfile ? "show" : "hide")
+  const showOverlay = () => "overlay " + (showChildren ? "show" : "hide")
 
   const renderToggleButton = () => {
-    if (!showProfile) {
+    if (!showChildren) {
       return (
         <button
           className="float-button hover:bg-transparent bg-blue-500 hover:text-blue-200 font-semibold text-white py-2 px-4 border hover:border-blue-200 border-transparent rounded font-bold"
-          onClick={toggleShowProfile}
+          onClick={toggleShowChildren}
         >
           {showButtonText}
         </button>
@@ -30,7 +30,7 @@ export const PhotoCard: FunctionComponent<PhotoCardProps> =
     return (
       <button
         className="float-button bg-gray-500 hover:text-blue-200 font-semibold text-white py-2 px-4 border border-transparent rounded font-bold"
-        onClick={toggleShowProfile}
+        onClick={toggleShowChildren}
       >
         {hideButtonText}
       </button>
@@ -38,7 +38,7 @@ export const PhotoCard: FunctionComponent<PhotoCardProps> =
   }
 
   const renderChildren = () => {
-    if (!showProfile) {
+    if (!showChildren) {
       return ''
     }
 
