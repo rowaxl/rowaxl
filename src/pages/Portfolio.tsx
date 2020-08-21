@@ -5,7 +5,28 @@ import { PhotoCard } from '../components/PhotoCard'
 const works = [
   {
     preview: 'business.jpg',
-    title: 'work name',
+    title: 'work 1',
+    description: 'web based some application',
+    repository: 'www.github.com/rowaxl/',
+    tags: ['Javascript', 'React', 'Typescript', 'Redux', 'Node.js', 'Material-UI', 'PWA']
+  },
+  {
+    preview: 'business.jpg',
+    title: 'work 2',
+    description: 'web based some application',
+    repository: 'www.github.com/rowaxl/',
+    tags: ['Javascript', 'React', 'Typescript', 'Redux', 'Node.js', 'Material-UI', 'PWA']
+  },
+  {
+    preview: 'business.jpg',
+    title: 'work 3',
+    description: 'web based some application',
+    repository: 'www.github.com/rowaxl/',
+    tags: ['Javascript', 'React', 'Typescript', 'Redux', 'Node.js', 'Material-UI', 'PWA']
+  },
+  {
+    preview: 'business.jpg',
+    title: 'work 4',
     description: 'web based some application',
     repository: 'www.github.com/rowaxl/',
     tags: ['Javascript', 'React', 'Typescript', 'Redux', 'Node.js', 'Material-UI', 'PWA']
@@ -14,35 +35,43 @@ const works = [
 
 export default () => {
   const renderWorks = () => works.map(work => (
-    <div className="w-1/2 md:w-full work-card" key={work.title}>
+    <div className="w-full lg:w-1/2 work-card" key={work.title}>
       <PhotoCard
         src={work.preview}
         alt={work.title}
-        showButtonText="Show Overview"
-        hideButtonText="Hide Overview"
+        showButtonText="Show Detail"
+        hideButtonText="Hide Detail"
       >
-        <p className="text-xl">
-          {work.title}
-        </p>
-        <p>
+        <p className="text-2xl">
           {work.description}
         </p>
 
-        <p>
-          {work.tags.map(tag => <span className={`chip ${tag}`}>{tag}</span>)}
+        <p className="text-xl">
+          <a href={work.repository}>Repository</a>
         </p>
+
       </PhotoCard>
+      
+      <p className="text-2xl">
+        {work.title}
+      </p>
+      
+      <div className="tag-wrap">
+        {work.tags.map(tag => <div className={`chip`} key={tag}>{tag}</div>)}
+      </div>
     </div>
   ))
 
   return (
     <Container>
-      <p className="text-4xl mx-12">
+      <p className="page-title text-4xl mx-12">
         Portfolio
       </p>
 
-      <div className="flex flex-wrap m-12 w-full">
-        {renderWorks()}
+      <div className="work-wrap">
+        <div className="flex flex-wrap justify-between">
+          {renderWorks()}
+        </div>
       </div>
     </Container>
   )

@@ -50,7 +50,7 @@ export const PhotoCard: FunctionComponent<PhotoCardProps> =
       <div className={showOverlay()}>
         {renderChildren()}
       </div>
-      <img className="back-img h-full w-auto" src={`${process.env.PUBLIC_URL}/img/${src}`} alt={alt} />
+      <img className="back-img" src={`${process.env.PUBLIC_URL}/img/${src}`} alt={alt} />
       {renderToggleButton()}
     </div>
   )

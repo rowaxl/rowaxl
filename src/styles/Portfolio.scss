@@ -1,0 +1,41 @@
+.work-wrap {
+  box-sizing: border-box;
+  height: 70vh;
+  min-height: 600px;
+  overflow-y: scroll;
+  background-color: #efefef;
+  box-shadow: inset 0 0 5px #000;
+  width: 90%;
+  margin: auto;
+  border-radius: 10px;
+  padding: 15px 20px;
+}
+
+.work-card {
+  min-height: 600px;
+  height: 35vh;
+  max-height: 900px;
+  padding: 0 20px;
+}
+
+.tag-wrap {
+  width: 100%;
+}
+
+.chip {
+  width: 90px;
+  display: inline-block;
+  text-align: center;
+  padding: 5px 10px;
+  background-color: #499f53;
+  border-radius: 5%;
+  font-size: 0.8em;
+  color: #fff;
+  margin: 5px 10px 0 0;
+}
+
+@media only screen and (min-width: 1024px) {
+  .work-card {
+    min-height: 400px;
+  }
+}

@@ -82,7 +82,7 @@ export default () => {
 
   return (
     <Container>
-      <p className="text-4xl mx-12">
+      <p className="page-title text-4xl mx-12">
         About me
       </p>
 

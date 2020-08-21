@@ -32,6 +32,11 @@ section.route-seciton {
   transition: opacity 300ms ease-in;
 }
 
+.page-title {
+  height: 5vh;
+  min-height: 2em;
+}
+
 .about-col-wrap {
   height: 70vh;
   min-height: 550px;
@@ -128,6 +133,47 @@ textarea.contact-description {
   overflow-y: scroll;
 }
 
+.work-wrap {
+  box-sizing: border-box;
+  height: 70vh;
+  min-height: 600px;
+  overflow-y: scroll;
+  background-color: #efefef;
+  box-shadow: inset 0 0 5px #000;
+  width: 90%;
+  margin: auto;
+  border-radius: 10px;
+  padding: 15px 20px;
+}
+
+.work-card {
+  min-height: 600px;
+  height: 35vh;
+  max-height: 900px;
+  padding: 0 20px;
+}
+
+.tag-wrap {
+  width: 100%;
+}
+
+.chip {
+  width: 90px;
+  display: inline-block;
+  text-align: center;
+  padding: 5px 10px;
+  background-color: #499f53;
+  border-radius: 5% 20%;
+  font-size: 0.8em;
+  color: #fff;
+  margin: 5px 10px 0 0;
+}
+
+@media only screen and (min-width: 1024px) {
+  .work-card {
+    min-height: 400px;
+  }
+}
 .message {
   font-weight: 900;
 }
@@ -240,14 +286,17 @@ textarea.contact-description {
 
 .photo-card-wrap {
   position: relative;
-  width: fit-content;
-  height: 100%;
+  width: 100%;
 }
 .photo-card-wrap .float-button {
   position: absolute;
   bottom: 10px;
   left: 35%;
   transition: all 300ms ease-in;
+}
+.photo-card-wrap img.back-img {
+  width: 100%;
+  height: auto;
 }
 
 .overlay {
@@ -274,7 +323,7 @@ textarea.contact-description {
 }
 @media only screen and (max-width: 1024px) {
   .overlay h5 {
-    font-size: 1.1em;
+    font-size: 1em;
   }
 }
 .overlay h5:nth-child(2) {

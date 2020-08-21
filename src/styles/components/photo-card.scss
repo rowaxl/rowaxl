@@ -1,13 +1,17 @@
 .photo-card-wrap {
   position: relative;
-  width: fit-content;
-  height: 100%;
+  width: 100%;
 
   .float-button {
     position: absolute;
     bottom: 10px;
     left: 35%;
     transition: all 300ms ease-in;
+  }
+
+  img.back-img {
+    width: 100%;
+    height: auto;
   }
 }
 
@@ -38,7 +42,7 @@
 
   @media only screen and (max-width: 1024px) {
     h5 {
-      font-size: 1.1em;
+      font-size: 1em;
     }
   }
 

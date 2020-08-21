@@ -281,7 +281,7 @@ export default () => {
     <Container>
       <ConfirmModal show={showModal} title={modalProps.title} onAction={modalProps.onAction} onClose={closeModal} />
 
-      <p className="text-4xl mx-12">
+      <p className="page-title text-4xl mx-12">
         Contact
       </p>
 
