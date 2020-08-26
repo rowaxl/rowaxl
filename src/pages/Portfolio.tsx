@@ -1,66 +1,59 @@
-import React from 'react'
+import React, { useState, useEffect, useCallback } from 'react'
 import { Container } from '../components/Container'
 import { PhotoCard } from '../components/PhotoCard'
-
-const works = [
-  {
-    preview: 'business.jpg',
-    title: 'work 1',
-    description: 'web based some application',
-    repository: 'www.github.com/rowaxl/',
-    tags: ['Javascript', 'React', 'Typescript', 'Redux', 'Node.js', 'Material-UI', 'PWA']
-  },
-  {
-    preview: 'business.jpg',
-    title: 'work 2',
-    description: 'web based some application',
-    repository: 'www.github.com/rowaxl/',
-    tags: ['Javascript', 'React', 'Typescript', 'Redux', 'Node.js', 'Material-UI', 'PWA']
-  },
-  {
-    preview: 'business.jpg',
-    title: 'work 3',
-    description: 'web based some application',
-    repository: 'www.github.com/rowaxl/',
-    tags: ['Javascript', 'React', 'Typescript', 'Redux', 'Node.js', 'Material-UI', 'PWA']
-  },
-  {
-    preview: 'business.jpg',
-    title: 'work 4',
-    description: 'web based some application',
-    repository: 'www.github.com/rowaxl/',
-    tags: ['Javascript', 'React', 'Typescript', 'Redux', 'Node.js', 'Material-UI', 'PWA']
-  }
-]
+import { Spinner } from '../components/Spinner'
+import { getWorks } from '../apis/portfolio'
+import Work from '../interface/Work'
 
 export default () => {
-  const renderWorks = () => works.map(work => (
-    <div className="w-full lg:w-1/2 work-card" key={work.title}>
-      <PhotoCard
-        src={work.preview}
-        alt={work.title}
-        showButtonText="Show Detail"
-        hideButtonText="Hide Detail"
-      >
+  const [works, setWorks] = useState<Work[]>([])
+
+  const getInitialWorks = useCallback(async () => {
+    const works = await getWorks()
+
+    if (works.length > 0) setWorks(works)
+  }, [])
+
+  useEffect(() => {
+    getInitialWorks()
+  }, [getInitialWorks])
+
+  const renderWorks = () => {
+    if (works.length < 1)
+      return (
+        <div className="spinner-wrap">
+          <Spinner />
+        </div>
+      )
+    
+    return works.map(work => (
+      <div className="w-full lg:w-1/2 work-card my-4" key={work.title}>
         <p className="text-2xl">
-          {work.description}
+          {work.title}
         </p>
 
-        <p className="text-xl">
-          <a href={work.repository}>Repository</a>
-        </p>
+        <PhotoCard
+          src={work.preview}
+          alt={work.title}
+          showButtonText="Show Detail"
+          hideButtonText="Hide Detail"
+        >
+          <h5 className="text-base">
+            {work.description}
+          </h5>
 
-      </PhotoCard>
-      
-      <p className="text-2xl">
-        {work.title}
-      </p>
-      
-      <div className="tag-wrap">
-        {work.tags.map(tag => <div className={`chip`} key={tag}>{tag}</div>)}
+          <button className="btn-repository text-base">
+              <a href={work.repository} target="_blank" rel="noopener noreferrer">Open Repository</a>
+          </button>
+
+        </PhotoCard>
+
+        <div className="tag-wrap mt-4">
+          {work.tags.map(tag => <div className={`chip`} key={tag}>{tag}</div>)}
+        </div>
       </div>
-    </div>
-  ))
+    ))
+  }
 
   return (
     <Container>

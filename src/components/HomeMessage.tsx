@@ -88,8 +88,7 @@ export const HomeMessage: FunctionComponent = () => {
     <div className="home-message-wrap">
       <div className="greeting-message">
         <h1>Hello, I'm Wonjae Kim.</h1>
-        <h3>Call me Walther.</h3>
-        <h3>I make front-end web applications!</h3>
+        <h3>I am developing Javascript / Typesciprt web applications!</h3>
       </div>
 
       <TransitionGroup>

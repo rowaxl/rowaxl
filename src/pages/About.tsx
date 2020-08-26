@@ -89,7 +89,7 @@ export default () => {
       <div className="flex flex-wrap m-12 about-col-wrap">
         <div className="w-full md:w-1/2 px-6">
           <PhotoCard
-            src="about.png"
+            src={`${process.env.PUBLIC_URL}/img/about.png`}
             alt="profile"
             showButtonText="Show My Story"
             hideButtonText="Hide Details"

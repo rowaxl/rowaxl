@@ -139,18 +139,29 @@ textarea.contact-description {
   min-height: 600px;
   overflow-y: scroll;
   background-color: #efefef;
-  box-shadow: inset 0 0 5px #000;
+  box-shadow: inset 0 0 10px -5px #ccc;
   width: 90%;
   margin: auto;
   border-radius: 10px;
-  padding: 15px 20px;
+  border: transparent 15px solid;
 }
 
 .work-card {
-  min-height: 600px;
   height: 35vh;
   max-height: 900px;
-  padding: 0 20px;
+  padding: 10px 20px;
+}
+.work-card .photo-card-wrap {
+  height: 70%;
+}
+
+.btn-repository {
+  background-color: #5ab664;
+  padding: 10px 5px;
+  border-radius: 5px;
+  position: absolute;
+  left: 34%;
+  bottom: 25%;
 }
 
 .tag-wrap {
@@ -163,7 +174,7 @@ textarea.contact-description {
   text-align: center;
   padding: 5px 10px;
   background-color: #499f53;
-  border-radius: 5% 20%;
+  border-radius: 5%;
   font-size: 0.8em;
   color: #fff;
   margin: 5px 10px 0 0;
@@ -174,6 +185,14 @@ textarea.contact-description {
     min-height: 400px;
   }
 }
+.spinner-wrap {
+  width: 100%;
+  height: 50vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .message {
   font-weight: 900;
 }
@@ -287,16 +306,18 @@ textarea.contact-description {
 .photo-card-wrap {
   position: relative;
   width: 100%;
+  height: 100%;
 }
 .photo-card-wrap .float-button {
   position: absolute;
   bottom: 10px;
   left: 35%;
   transition: all 300ms ease-in;
+  z-index: 101;
 }
-.photo-card-wrap img.back-img {
+.photo-card-wrap .back-img {
   width: 100%;
-  height: auto;
+  height: 100%;
 }
 
 .overlay {
@@ -306,6 +327,7 @@ textarea.contact-description {
   transition: background-color 200ms ease-in;
   padding: 15px;
   color: #fff;
+  z-index: 100;
 }
 .overlay.show {
   background-color: rgba(8, 36, 84, 0.7);

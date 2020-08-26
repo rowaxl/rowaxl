@@ -1,4 +1,5 @@
 import React, { FunctionComponent, useState } from 'react'
+import { LazyLoadingImage } from './LazyLoadImage'
 
 type PhotoCardProps = {
   src: string,
@@ -50,7 +51,8 @@ export const PhotoCard: FunctionComponent<PhotoCardProps> =
       <div className={showOverlay()}>
         {renderChildren()}
       </div>
-      <img className="back-img" src={`${process.env.PUBLIC_URL}/img/${src}`} alt={alt} />
+
+      <LazyLoadingImage className="back-img" src={src} alt={alt} />
       {renderToggleButton()}
     </div>
   )

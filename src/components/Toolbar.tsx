@@ -18,8 +18,12 @@ export default () => {
   )
 
   return (
-    <nav className="bg-white px-8">
-      <div className="flex mx-auto justify-center">
+    <nav className="px-8 py-4 flex justify-between">
+      <p className="text-4xl font-bold">
+        Wonjae Kim
+      </p>
+
+      <div className="flex justify-center">
         {renderLinks()}
       </div>
     </nav>

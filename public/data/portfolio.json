@@ -1,7 +1,7 @@
 {
   "portpolios": [
     {
-      "preview": "https://github.com/rowaxl/simple-scrum-board/blob/master/public/overview.png",
+      "preview": "https://raw.githubusercontent.com/rowaxl/simple-scrum-board/master/public/overview.png",
       "title": "Simple scrum board",
       "description": "React based simple task board web application",
       "repository": "https://github.com/rowaxl/simple-scrum-board",
@@ -10,28 +10,28 @@
     {
       "preview": "https://github.com/rowaxl/TriPlanner/raw/master/overview.png",
       "title": "TriPlaner",
-      "description": "Managing travel plan web application with MERN Stack.",
+      "description": "Managing travel application with MERN Stack.",
       "repository": "https://github.com/rowaxl/triplanner",
       "tags": ["Javascript", "React", "CSS", "Material-UI", "Node.js", "MongoDB"]
     },
     {
-      "preview": "https://github.com/rowaxl/shiories-client/blob/master/overview.png",
+      "preview": "https://raw.githubusercontent.com/rowaxl/shiories-client/master/overview.png",
       "title": "The Shiories",
       "description": "Typescript and React based bookmark application.",
       "repository": "https://github.com/rowaxl/shiories-client",
       "tags": ["Typescript", "React", "Material-UI", "PWA"]
     },
     {
-      "preview": "https://github.com/rowaxl/react-redux-test/blob/master/overview.png",
+      "preview": "https://raw.githubusercontent.com/rowaxl/react-redux-test/master/overview.png",
       "title": "React Redux Test",
-      "description": "Test bolierplate of React and Redux pattern",
+      "description": "Test bolierplate of React and Redux.",
       "repository": "https://github.com/rowaxl/react-redux-test",
       "tags": ["Javascript", "React", "Test"]
     },
     {
-      "preview": "https://github.com/rowaxl/photo-gallery/blob/master/overview.png",
+      "preview": "https://raw.githubusercontent.com/rowaxl/photo-gallery/master/overview.png",
       "title": "Photo Gallery",
-      "description": "CS50Web project 0. Grid photo gallery with HTML and CSS",
+      "description": "CS50Web project 0. Grid photo gallery",
       "repository": "https://rowaxl.github.io/photo-gallery",
       "tags": ["Javascript", "CSS"]
     }

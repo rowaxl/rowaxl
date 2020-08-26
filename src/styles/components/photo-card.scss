@@ -1,17 +1,19 @@
 .photo-card-wrap {
   position: relative;
   width: 100%;
+  height: 100%;
 
   .float-button {
     position: absolute;
     bottom: 10px;
     left: 35%;
     transition: all 300ms ease-in;
+    z-index: 101;
   }
 
-  img.back-img {
+  .back-img {
     width: 100%;
-    height: auto;
+    height: 100%;
   }
 }
 
@@ -22,6 +24,7 @@
   transition: background-color 200ms ease-in;
   padding: 15px;
   color: #fff;
+  z-index: 100;
 
   &.show {
     background-color: rgba(8, 36, 84, 0.7);

@@ -4,18 +4,30 @@
   min-height: 600px;
   overflow-y: scroll;
   background-color: #efefef;
-  box-shadow: inset 0 0 5px #000;
+  box-shadow: inset 0 0 10px -5px #ccc;
   width: 90%;
   margin: auto;
   border-radius: 10px;
-  padding: 15px 20px;
+  border: transparent 15px solid;
 }
 
 .work-card {
-  min-height: 600px;
   height: 35vh;
   max-height: 900px;
-  padding: 0 20px;
+  padding: 10px 20px;
+
+  .photo-card-wrap {
+    height: 70%;
+  }
+}
+
+.btn-repository {
+  background-color: #5ab664;
+  padding: 10px 5px;
+  border-radius: 5px;
+  position: absolute;
+  left: 34%;
+  bottom: 25%;
 }
 
 .tag-wrap {
@@ -38,4 +50,12 @@
   .work-card {
     min-height: 400px;
   }
+}
+
+.spinner-wrap {
+  width: 100%;
+  height: 50vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
