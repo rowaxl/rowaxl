@@ -55,8 +55,6 @@ export const LazyLoadingImage: FunctionComponent<LazyLoadImageProps> = ({ src, a
     removePlaceholder()
   }
 
-  console.log(src)
-
   return (
     <ImageWrapper className={className}>
       <Placeholder ref={refPlaceholder} />

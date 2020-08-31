@@ -9,7 +9,7 @@ export default () => {
   const renderLinks = () => (
     links.map(
       link => {
-        let linkPath = link === 'home' ? '/' : '/' + link
+        let linkPath = link === 'home' ? '/rowaxl' : '/' + link
         let linkClasses = pathname === linkPath ? classes + 'current-path' : classes
 
         return <Link key={link} className={linkClasses} to={linkPath}>{link}</Link>

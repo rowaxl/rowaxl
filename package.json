@@ -1,7 +1,9 @@
 {
   "name": "rowaxl",
-  "version": "0.1.0",
+  "version": "1.0.0",
+  "homepage": "http://rowaxl.github.io/rowaxl",
   "private": true,
+  "license": "MIT",
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
@@ -34,7 +36,8 @@
     "start:tailwind": "postcss src/styles/tailwind.css -o src/assets/css/tailwind.css",
     "build": "yarn build:css && react-scripts build",
     "build:css": "postcss src/styles/tailwind.css -o src/assets/css/tailwind.css && sass src/styles/main.scss src/assets/css/main.css",
-    "test": "react-scripts test"
+    "test": "react-scripts test",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -53,6 +56,7 @@
   },
   "devDependencies": {
     "concurrently": "^5.2.0",
+    "gh-pages": "^3.1.0",
     "postcss-scss": "^2.1.1"
   }
 }
