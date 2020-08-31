@@ -17,7 +17,6 @@
     "@types/styled-components": "^5.1.2",
     "axios": "^0.20.0",
     "emailjs-com": "^2.6.3",
-    "postcss": "^7.0.32",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-lazyload": "^3.0.0",
@@ -25,7 +24,6 @@
     "react-scripts": "3.4.1",
     "react-text-loop": "^2.3.0",
     "react-transition-group": "^4.4.1",
-    "scss": "^0.2.4",
     "styled-components": "^5.1.1",
     "tailwindcss": "^1.6.0",
     "typescript": "~3.7.2"
@@ -36,7 +34,7 @@
     "start:sass": "sass --watch src/styles/main.scss src/assets/css/main.css",
     "start:tailwind": "postcss src/styles/tailwind.css -o src/assets/css/tailwind.css",
     "build": "yarn build:css && react-scripts build",
-    "build:css": "postcss src/styles/tailwind.css -o src/assets/css/tailwind.css && sass src/styles/main.scss src/assets/css/main.css",
+    "build:css": "yarn postcss src/styles/tailwind.css -o src/assets/css/tailwind.css && yarn sass_cli src/styles/main.scss src/assets/css/main.css",
     "test": "react-scripts test"
   },
   "eslintConfig": {
@@ -56,6 +54,7 @@
   },
   "devDependencies": {
     "concurrently": "^5.2.0",
+    "postcss-cli": "^7.1.1",
     "postcss-scss": "^2.1.1"
   }
 }
