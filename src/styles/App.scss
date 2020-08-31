@@ -1,0 +1,38 @@
+.app-wrap {
+  background: #f3f7fc;
+  height: 100vh;
+}
+
+div.transition-group {
+  position: relative;
+}
+
+section.route-seciton {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+}
+
+.fade-enter {
+  opacity: 0.01;
+}
+
+.fade-enter.fade-enter-active {
+  opacity: 1;
+  transition: opacity 300ms ease-in;
+}
+
+.fade-exit {
+  opacity: 1;
+}
+
+.fade-exit.fade-exit-active {
+  opacity: 0.01;
+  transition: opacity 300ms ease-in;
+}
+
+.page-title {
+  height: 5vh;
+  min-height: 2em;
+}

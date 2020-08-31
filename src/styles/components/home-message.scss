@@ -1,0 +1,85 @@
+.message {
+  font-weight: 900;
+}
+
+.greeting-message {
+  margin: auto;
+  z-index: 1000;
+  color: #2f73b1;
+  width: fit-content;
+  padding: 10px;
+  border-radius: 5px;
+  background: rgba(255, 255, 255, 0.7);
+  text-align: center;
+
+  & h1 {
+    font-weight: 900;
+  }
+}
+
+.message.to-community {
+  color: #47b554;
+}
+
+.message.to-business {
+  color: #4156d2
+}
+
+.message.to-us {
+  color: #d83a3a
+}
+
+.home-message-wrap {
+  width: 100%;
+  min-height: 540px;
+  height: 85vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  position: relative;
+}
+
+.home-message-wrap h1 {
+  font-size: 2em;
+}
+
+.home-message-wrap h3 {
+  font-size: 1.7em;
+}
+
+.message-wrap {
+  position: absolute;
+  bottom: 10%;
+  left: 10%;
+}
+
+.home-image {
+  width: 100%;
+  height: 85vh;
+  mask-image: linear-gradient(to top, transparent 10%, black 90% );
+  -webkit-mask-image: linear-gradient(to top, transparent 10%, black 90% );
+  position: absolute;
+  top:0;
+  left:0;
+}
+
+/* home-image animation*/
+.slide-enter {
+  transform: translateX(100%);
+  opacity: 0.01;
+}
+.slide-enter-active {
+  transform: translateX(0%);
+  opacity: 1;
+  transition: all 1000ms ease-in-out;
+}
+.slide-exit {
+  transform: translateX(0%);
+  opacity: 1;
+}
+
+.slide-exit-active {
+  transform: translateX(-100%);
+  opacity: 0.01;
+  transition: all 1000ms ease-in-out;
+}

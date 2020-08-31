@@ -1,6 +1,5 @@
 import React from 'react'
 import { Link, useLocation } from 'react-router-dom'
-import '../assets/css/toolbar.css'
 
 export default () => {
   const links = ['home', 'about', 'portfolio', 'contact'];
@@ -19,8 +18,12 @@ export default () => {
   )
 
   return (
-    <nav className="bg-white px-8 shadow-md">
-      <div className="-mb-px flex mx-auto justify-center shadow-md">
+    <nav className="px-8 py-4 flex justify-between">
+      <p className="text-4xl font-bold">
+        Wonjae Kim
+      </p>
+
+      <div className="flex justify-center">
         {renderLinks()}
       </div>
     </nav>

@@ -1,0 +1,39 @@
+{
+  "portpolios": [
+    {
+      "preview": "https://raw.githubusercontent.com/rowaxl/simple-scrum-board/master/public/overview.png",
+      "title": "Simple scrum board",
+      "description": "React based simple task board web application",
+      "repository": "https://github.com/rowaxl/simple-scrum-board",
+      "tags": ["Javascript", "React", "Material-UI"]
+    },
+    {
+      "preview": "https://github.com/rowaxl/TriPlanner/raw/master/overview.png",
+      "title": "TriPlaner",
+      "description": "Managing travel application with MERN Stack.",
+      "repository": "https://github.com/rowaxl/triplanner",
+      "tags": ["Javascript", "React", "CSS", "Material-UI", "Node.js", "MongoDB"]
+    },
+    {
+      "preview": "https://raw.githubusercontent.com/rowaxl/shiories-client/master/overview.png",
+      "title": "The Shiories",
+      "description": "Typescript and React based bookmark application.",
+      "repository": "https://github.com/rowaxl/shiories-client",
+      "tags": ["Typescript", "React", "Material-UI", "PWA"]
+    },
+    {
+      "preview": "https://raw.githubusercontent.com/rowaxl/react-redux-test/master/overview.png",
+      "title": "React Redux Test",
+      "description": "Test bolierplate of React and Redux.",
+      "repository": "https://github.com/rowaxl/react-redux-test",
+      "tags": ["Javascript", "React", "Test"]
+    },
+    {
+      "preview": "https://raw.githubusercontent.com/rowaxl/photo-gallery/master/overview.png",
+      "title": "Photo Gallery",
+      "description": "CS50Web project 0. Grid photo gallery",
+      "repository": "https://rowaxl.github.io/photo-gallery",
+      "tags": ["Javascript", "CSS"]
+    }
+  ] 
+}

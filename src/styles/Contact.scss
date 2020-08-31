@@ -1,0 +1,85 @@
+$linkedin_button: rgb(40, 104, 177);
+$github_button: rgb(100, 100, 100);
+$twitter_button: rgb(30, 161, 241);
+$submit_button: #4299E1;
+$clear_button: #718096;
+
+.button-sns {
+  width: 140px;
+  transition: all 100ms ease-in;
+
+  &.linkedin {
+    background-color: $linkedin_button;
+    box-shadow: darken($color: $linkedin_button, $amount: 20) 4px 4px 5px;
+
+    &:hover {
+      background-color: lighten($color: $linkedin_button, $amount: 20);
+    }
+
+    &:active {
+      background-color: darken($color: $linkedin_button, $amount: 20);
+      transform: translateX(4px) translateY(4px);
+      box-shadow: none;
+    }
+  }
+
+  &.github {
+    background-color: $github_button;
+    box-shadow: darken($color: $github_button, $amount: 20) 4px 4px 5px;
+
+    &:hover {
+      background-color: lighten($color: $github_button, $amount: 20);
+    }
+
+    &:active {
+      background-color: darken($color: $github_button, $amount: 20);
+      transform: translateX(4px) translateY(4px);
+      box-shadow: none;
+    }
+  }
+
+  &.twitter {
+    background-color: $twitter_button;
+    box-shadow: darken($color: $twitter_button, $amount: 20) 4px 4px 5px;
+
+    &:hover {
+      background-color: lighten($color: $twitter_button, $amount: 20);
+    }
+
+    &:active {
+      background-color: darken($color: $twitter_button, $amount: 20);
+      transform: translateX(4px) translateY(4px);
+      box-shadow: none;
+    }
+  }
+}
+
+button.button-contact-form {
+  width: 80px;
+  transition: all 100ms ease-in;
+
+  &.button-submit {
+    box-shadow: darken($color: $submit_button, $amount: 20) 4px 4px  5px;
+  
+    &:active {
+      background-color: darken($color: $submit_button, $amount: 20);
+      transform: translateX(4px) translateY(4px);
+      box-shadow: none;
+    }
+  }
+
+  &.button-clear {
+    box-shadow: darken($color: $clear_button, $amount: 20) 4px 4px  5px;
+  
+    &:active {
+      background-color: darken($color: $clear_button, $amount: 20);
+      transform: translateX(4px) translateY(4px);
+      box-shadow: none;
+    }
+  }
+}
+
+textarea.contact-description {
+  resize: none;
+  overflow-y: scroll;
+}

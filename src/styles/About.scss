@@ -1,0 +1,32 @@
+.about-col-wrap {
+  height: 70vh;
+  min-height: 550px;
+
+  h3 {
+    font-size: 1.8em;
+  }
+}
+
+.skills-slide {
+  animation-fill-mode: forwards;
+}
+
+.skills-slide-enter {
+  transform: translateX(100%);
+
+  &.skills-slide-enter-active {
+    transform: translateX(0%);
+    transition: all 500ms ease-in;
+  }
+  animation-fill-mode: forwards;
+}
+
+.skills-slide-exit {
+  opacity: 1;
+
+  &.skills-slide-exit-active {
+    opacity: 1;
+  }
+
+  animation-fill-mode: forwards;
+}

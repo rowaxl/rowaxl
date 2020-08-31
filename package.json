@@ -10,20 +10,31 @@
     "@types/node": "^12.0.0",
     "@types/react": "^16.9.0",
     "@types/react-dom": "^16.9.0",
+    "@types/react-lazyload": "^2.6.0",
     "@types/react-router-dom": "^5.1.5",
+    "@types/react-transition-group": "^4.4.0",
+    "@types/styled-components": "^5.1.2",
+    "axios": "^0.20.0",
+    "emailjs-com": "^2.6.3",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
+    "react-lazyload": "^3.0.0",
     "react-router-dom": "^5.2.0",
     "react-scripts": "3.4.1",
+    "react-text-loop": "^2.3.0",
+    "react-transition-group": "^4.4.1",
+    "styled-components": "^5.1.1",
     "tailwindcss": "^1.6.0",
     "typescript": "~3.7.2"
   },
   "scripts": {
-    "start": "yarn watch:css && react-scripts start",
+    "start": "concurrently yarn:start:*",
+    "start:react": "react-scripts start",
+    "start:sass": "sass --watch src/styles/main.scss src/assets/css/main.css",
+    "start:tailwind": "postcss src/styles/tailwind.css -o src/assets/css/tailwind.css",
     "build": "yarn build:css && react-scripts build",
-    "test": "react-scripts test",
-    "build:css": "postcss src/tailwind.css -o src/assets/css/main.css",
-    "watch:css": "postcss src/tailwind.css -o src/assets/css/main.css"
+    "build:css": "postcss src/styles/tailwind.css -o src/assets/css/tailwind.css && sass src/styles/main.scss src/assets/css/main.css",
+    "test": "react-scripts test"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -39,5 +50,9 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "concurrently": "^5.2.0",
+    "postcss-scss": "^2.1.1"
   }
 }

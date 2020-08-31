@@ -1,0 +1,76 @@
+.photo-card-wrap {
+  position: relative;
+  width: 100%;
+  height: 100%;
+
+  .float-button {
+    position: absolute;
+    bottom: 10px;
+    left: 35%;
+    transition: all 300ms ease-in;
+    z-index: 101;
+  }
+
+  .back-img {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  transition: background-color 200ms ease-in;
+  padding: 15px;
+  color: #fff;
+  z-index: 100;
+
+  &.show {
+    background-color: rgba(8, 36, 84, 0.7);
+  }
+
+  &.hide {
+    background-color: transparent;
+  }
+
+  h5 {
+    font-size: 1.4em;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 0;
+    animation: type 2s steps(60, end);
+    animation-fill-mode: forwards;
+  }
+
+  @media only screen and (max-width: 1024px) {
+    h5 {
+      font-size: 1em;
+    }
+  }
+
+  h5:nth-child(2) {
+    animation-delay: 2s;
+  }
+
+  h5:nth-child(3) {
+    animation-delay: 4s;
+  }
+
+  h5:nth-child(4) {
+    animation-delay: 6s;
+  }
+
+  h5:nth-child(5) {
+    animation-delay: 8s;
+  }
+}
+
+@keyframes type { 
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+} 
