@@ -18,11 +18,7 @@ export default () => {
   )
 
   return (
-    <nav className="px-8 py-4 flex justify-between">
-      <p className="text-4xl font-bold">
-        Wonjae Kim
-      </p>
-
+    <nav className="px-8 py-4 flex justify-center">
       <div className="flex justify-center">
         {renderLinks()}
       </div>
