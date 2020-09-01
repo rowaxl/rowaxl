@@ -27,13 +27,6 @@
       "description": "Test bolierplate of React and Redux.",
       "repository": "https://github.com/rowaxl/react-redux-test",
       "tags": ["Javascript", "React", "Test"]
-    },
-    {
-      "preview": "https://raw.githubusercontent.com/rowaxl/photo-gallery/master/overview.png",
-      "title": "Photo Gallery",
-      "description": "CS50Web project 0. Grid photo gallery",
-      "repository": "https://rowaxl.github.io/photo-gallery",
-      "tags": ["Javascript", "CSS"]
     }
   ] 
 }
