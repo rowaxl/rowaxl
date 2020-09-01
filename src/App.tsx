@@ -27,7 +27,6 @@ function App() {
                 <section className="route-seciton">
                   <Switch location={location}>
                     <Route exact path="/" component={Home} />
-                    <Route path="/rowaxl" component={Home} />
                     <Route path="/about" component={About} />
                     <Route path="/portfolio" component={Portfolio} />
                     <Route path="/contact" component={Contact} />
