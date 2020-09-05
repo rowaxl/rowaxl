@@ -50,7 +50,7 @@ const label = {
 const snsList: SNSType[] = [
   {
     type: 'linkedin',
-    img: 'linkedin.png',
+    img: 'linkedIn.png',
     value: 'LinkedIn',
     href: 'https://www.linkedin.com/in/wonjae-kim-953194173/'
   },
