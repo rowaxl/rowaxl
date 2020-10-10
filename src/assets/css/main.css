@@ -155,13 +155,29 @@ textarea.contact-description {
   height: 70%;
 }
 
+.detail-wrap {
+  display: flex;
+  height: calc(100% - 60px);
+  flex-direction: column;
+  justify-content: space-between;
+}
+.detail-wrap .work-description {
+  flex-grow: 1;
+}
+
+.btn-url {
+  background-color: #689df9;
+  padding: 10px 5px;
+  border-radius: 5px;
+  position: relative;
+  margin-bottom: 5px;
+}
+
 .btn-repository {
   background-color: #5ab664;
   padding: 10px 5px;
   border-radius: 5px;
-  position: absolute;
-  left: 34%;
-  bottom: 25%;
+  position: relative;
 }
 
 .tag-wrap {

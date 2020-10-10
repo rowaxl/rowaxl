@@ -1,9 +1,18 @@
 {
   "portpolios": [
     {
+      "preview": "https://github.com/rowaxl/100daysofcode/blob/master/next_ghost/overview.png?raw=true",
+      "title": "Blaze Blog",
+      "description": "Next.js frontend + Ghost backend blog application",
+      "URL": "https://next-ghost.rowaxl.vercel.app/",
+      "repository": "https://github.com/rowaxl/100daysofcode/tree/master/next_ghost",
+      "tags": ["Next.js", "React", "Typescript", "Ghost"]
+    },
+    {
       "preview": "https://raw.githubusercontent.com/rowaxl/simple-scrum-board/master/public/overview.png",
       "title": "Simple scrum board",
       "description": "React based simple task board web application",
+      "URL": "https://simple-scrum-board.vercel.app/",
       "repository": "https://github.com/rowaxl/simple-scrum-board",
       "tags": ["Javascript", "React", "Material-UI"]
     },
@@ -11,6 +20,7 @@
       "preview": "https://github.com/rowaxl/TriPlanner/raw/master/overview.png",
       "title": "TriPlaner",
       "description": "Managing travel application with MERN Stack.",
+      "URL": "",
       "repository": "https://github.com/rowaxl/triplanner",
       "tags": ["Javascript", "React", "CSS", "Material-UI", "Node.js", "MongoDB"]
     },
@@ -18,6 +28,7 @@
       "preview": "https://raw.githubusercontent.com/rowaxl/shiories-client/master/overview.png",
       "title": "The Shiories",
       "description": "Typescript and React based bookmark application.",
+      "URL": "",
       "repository": "https://github.com/rowaxl/shiories-client",
       "tags": ["Typescript", "React", "Material-UI", "PWA"]
     },
@@ -25,6 +36,7 @@
       "preview": "https://raw.githubusercontent.com/rowaxl/react-redux-test/master/overview.png",
       "title": "React Redux Test",
       "description": "Test bolierplate of React and Redux.",
+      "URL": "",
       "repository": "https://github.com/rowaxl/react-redux-test",
       "tags": ["Javascript", "React", "Test"]
     }

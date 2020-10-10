@@ -19,13 +19,13 @@ export default () => {
   }, [getInitialWorks])
 
   const renderWorks = () => {
-    if (works.length < 1)
+    if (!works || works.length < 1)
       return (
         <div className="spinner-wrap">
           <Spinner />
         </div>
       )
-    
+
     return works.map(work => (
       <div className="w-full lg:w-1/2 work-card my-4" key={work.title}>
         <p className="text-2xl">
@@ -38,14 +38,22 @@ export default () => {
           showButtonText="Show Detail"
           hideButtonText="Hide Detail"
         >
-          <h5 className="text-base">
-            {work.description}
-          </h5>
+          <div className="detail-wrap">
+            <h5 className="text-base work-description">
+              {work.description}
+            </h5>
 
-          <button className="btn-repository text-base">
-              <a href={work.repository} target="_blank" rel="noopener noreferrer">Open Repository</a>
-          </button>
+            {
+              work.URL.length > 0 &&
+              <button className="btn-url text-base">
+                  <a href={work.URL} target="_blank" rel="noopener noreferrer">Open App</a>
+              </button>
+            }
 
+            <button className="btn-repository text-base">
+                <a href={work.repository} target="_blank" rel="noopener noreferrer">Open Repository</a>
+            </button>
+          </div>
         </PhotoCard>
 
         <div className="tag-wrap mt-4">
