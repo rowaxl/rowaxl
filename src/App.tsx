@@ -6,7 +6,7 @@ import Home from './pages/Home'
 import About from './pages/About'
 import Portfolio from './pages/Portfolio'
 import Contact from './pages/Contact'
-import { TransitionGroup, CSSTransition } from 'react-transition-group'
+import { SwitchTransition, CSSTransition } from 'react-transition-group'
 
 function App() {
   return (
@@ -18,11 +18,11 @@ function App() {
           const { key } = location;
           
           return (
-            <TransitionGroup className="transition-group">
+            <SwitchTransition mode="out-in">
               <CSSTransition
                 key={key}
                 classNames={'fade'}
-                timeout={{ enter: 1000, exit: 300 }}
+                timeout={300}
               >
                 <section className="route-seciton">
                   <Switch location={location}>
@@ -33,7 +33,7 @@ function App() {
                   </Switch>
                 </section>
               </CSSTransition>
-            </TransitionGroup>
+            </SwitchTransition>
           )
         }} />
 
