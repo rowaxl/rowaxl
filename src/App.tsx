@@ -10,7 +10,7 @@ import { SwitchTransition, CSSTransition } from 'react-transition-group'
 
 function App() {
   return (
-    <div className="app-wrap">
+    <div className="app-wrap bg-gray-100 dark:bg-gray-800">
       <BrowserRouter>
         <Toolbar />
 
@@ -42,4 +42,4 @@ function App() {
   );
 }
 
-export default App;
+export default App

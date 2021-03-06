@@ -4,16 +4,13 @@ import { ListItem } from './ListItem'
 type SkillListProps = {
   skillLabel: string,
   iconSrc: string,
-  iconAlt: string,
-  projectCount: number
+  iconAlt: string
 }
 
-export const SkillList: FunctionComponent<SkillListProps> = ({ skillLabel, iconSrc, iconAlt, projectCount }) => {
+export const SkillList: FunctionComponent<SkillListProps> = ({ skillLabel, iconSrc, iconAlt }) => {
   return (
     <div>
-      <ListItem label={skillLabel} iconSrc={iconSrc} iconAlt={iconAlt}>
-        <div className="text-blue-400">{projectCount} projects</div>
-      </ListItem>
+      <ListItem label={skillLabel} iconSrc={iconSrc} iconAlt={iconAlt} />
       <hr className="boder-b-0 my-4" />
     </div>
   );

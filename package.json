@@ -4,6 +4,7 @@
   "private": true,
   "license": "MIT",
   "dependencies": {
+    "@craco/craco": "^6.1.1",
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
     "@testing-library/user-event": "^7.1.2",
@@ -17,26 +18,27 @@
     "@types/styled-components": "^5.1.2",
     "axios": "^0.20.0",
     "emailjs-com": "^2.6.3",
-    "react": "^16.13.1",
-    "react-dom": "^16.13.1",
-    "react-lazyload": "^3.0.0",
+    "postcss": "^7",
+    "postcss-preset-env": "^6.7.0",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "react-lazyload": "^3.2.0",
     "react-router-dom": "^5.2.0",
-    "react-scripts": "3.4.1",
+    "react-scripts": "^4.0.3",
     "react-text-loop": "^2.3.0",
     "react-transition-group": "^4.4.1",
     "sass": "^1.26.10",
     "styled-components": "^5.1.1",
-    "tailwindcss": "^1.6.0",
+    "tailwindcss": "npm:@tailwindcss/postcss7-compat",
     "typescript": "~3.7.2"
   },
   "scripts": {
     "start": "concurrently yarn:start:*",
-    "start:react": "react-scripts start",
+    "start:react": "craco start",
     "start:sass": "sass --watch src/styles/main.scss src/assets/css/main.css",
-    "start:tailwind": "postcss src/styles/tailwind.css -o src/assets/css/tailwind.css",
-    "build": "yarn build:css && react-scripts build",
-    "build:css": "yarn postcss src/styles/tailwind.css -o src/assets/css/tailwind.css && yarn sass src/styles/main.scss src/assets/css/main.css",
-    "test": "react-scripts test"
+    "build": "yarn build:css && craco build",
+    "build:css": "yarn sass src/styles/main.scss src/assets/css/main.css",
+    "test": "craco test"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -54,6 +56,8 @@
     ]
   },
   "devDependencies": {
+    "@tailwindcss/postcss7-compat": "^2.0.3",
+    "autoprefixer": "^9",
     "concurrently": "^5.2.0",
     "postcss-cli": "^7.1.1",
     "postcss-scss": "^2.1.1"

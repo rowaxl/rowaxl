@@ -1,6 +1,4 @@
-import React, { useState, useEffect } from 'react'
-import { TransitionGroup, CSSTransition } from 'react-transition-group'
-
+import React from 'react'
 import { Container } from '../components/Container'
 import { PhotoCard } from '../components/PhotoCard'
 import { SkillList } from '../components/SkillList'
@@ -8,8 +6,7 @@ import { SkillList } from '../components/SkillList'
 type SkillItem = {
   title: string,
   iconSrc: string,
-  iconAlt: string,
-  count: number
+  iconAlt: string
 }
 
 
@@ -18,68 +15,50 @@ const skillLists: SkillItem[] = [
     title: 'Javascript',
     iconSrc: 'javascript.png',
     iconAlt: 'logo of javascript',
-    count: 17
   },
   {
     title: 'Typescript',
     iconSrc: 'typescript.svg',
     iconAlt: 'logo of typescript',
-    count: 4
   },
   {
     title: 'React',
     iconSrc: 'react.svg',
-    iconAlt: 'logo of react',
-    count: 21
+    iconAlt: 'logo of react'
   },
   {
-    title: 'Vue.js',
-    iconSrc: 'vue.svg',
-    iconAlt: 'logo of vue.js',
-    count: 5
+    title: 'Next.js',
+    iconSrc: 'vercel.svg',
+    iconAlt: 'logo of next.js',
   },
   {
-    title: 'Redux / Vuex',
+    title: 'Redux',
     iconSrc: 'redux.png',
     iconAlt: 'logo of redux',
-    count: 10
   },
   {
     title: 'Material-UI',
     iconSrc: 'mui.svg',
     iconAlt: 'logo of material ui',
-    count: 6
+  },
+  {
+    title: 'Tailwind CSS',
+    iconSrc: 'tailwind.png',
+    iconAlt: 'logo of tailwindcss',
   },
   {
     title: 'Progressive Web Application',
     iconSrc: 'pwa.png',
     iconAlt: 'logo of pwa',
-    count: 3
   },
   {
     title: 'Node.js',
     iconSrc: 'nodejs.svg',
     iconAlt: 'logo of node.js',
-    count: 6
   }
 ]
 
-export default () => {
-  // eslint-disable-next-line
-  const [skills, setSkills] = useState<SkillItem[]>([])
-
-  useEffect(() => {
-    const renderSkillsets = () => {
-      if (skillLists.length < 1) return
-
-      setSkills(skills.concat(skillLists.shift() as SkillItem))
-    }
-
-    const interval = setInterval(renderSkillsets, 300)
-
-    return () => clearInterval(interval)
-  }, [skills])
-
+const AboutPage = () => {
   return (
     <Container>
       <p className="page-title text-4xl mx-12">
@@ -98,13 +77,13 @@ export default () => {
               Started career as web developer in Tokyo, Japan.
             </h5>
             <h5>
-              3 years of experience in javascript development.
+              3+ years of experience in javascript development.
             </h5>
             <h5>
               Currently based on Vancouver, Canada.
             </h5>
             <h5>
-              Experience: MERN stacks with AWS / Azure
+              Experience: MERN stacks with AWS / Azure / Firebase
             </h5>
             <h5>
               Values: Self-learning, resiliency, and deligent.
@@ -117,26 +96,18 @@ export default () => {
               <p className="text-2xl font-semibold text-gray-800">Skill Set</p>
           </div>
           <hr className="mx-auto" />
-          <TransitionGroup>
-                {
-                skills.map(s =>
-                  <CSSTransition
-                    classNames="skills-slide"
-                    timeout={500}
-                    in={true}
-                    
-                    key={s.title}>
-                      <SkillList
-                        skillLabel={s.title}
-                        iconSrc={s.iconSrc}
-                        iconAlt={s.iconAlt}
-                        projectCount={s.count}
-                      />
-                  </CSSTransition>
-                )}
-          </TransitionGroup>
+          {skillLists.map(s =>
+            <SkillList
+              key={s.title}
+              skillLabel={s.title}
+              iconSrc={s.iconSrc}
+              iconAlt={s.iconAlt}
+            />)
+          }
         </div>
       </div>
     </Container>
   )
 }
+
+export default AboutPage

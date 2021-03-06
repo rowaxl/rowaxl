@@ -18,7 +18,7 @@ export default () => {
   )
 
   return (
-    <nav className="px-8 py-4 flex justify-center">
+    <nav className="px-8 py-4 flex justify-center bg-gray-200 dark:bg-gray-700">
       <div className="flex justify-center">
         {renderLinks()}
       </div>
