@@ -10,11 +10,11 @@ export const ListItem: FunctionComponent<ListItemProps> = ({ label, iconSrc, ico
   return (
     <div className="flex items-center my-4">
       <div className="w-16">
-        <img className="w-12 h-12 rounded" src={`${process.env.PUBLIC_URL}/img/${iconSrc}`} alt={iconAlt} />
+        <img className="w-12 h-12 rounded dark:bg-gray-200 rounded my-2 p-2" src={`${process.env.PUBLIC_URL}/img/${iconSrc}`} alt={iconAlt} />
       </div>
 
       <div className="flex-1 pl-2">
-        <div className="text-gray-700 font-semibold">
+        <div className="text-gray-700 dark:text-gray-200 font-semibold">
           {label}
         </div>
       </div>

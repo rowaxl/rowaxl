@@ -17,6 +17,14 @@
       "tags": ["Javascript", "React", "Material-UI"]
     },
     {
+      "preview": "https://raw.githubusercontent.com/rowaxl/shiories-client/master/overview.png",
+      "title": "BLVD86",
+      "description": "  Apperel EC Site builded with gatsby.js and Shopify",
+      "URL": "https://blvd86.com/",
+      "repository": "",
+      "tags": ["React", "Gatsby", "Shopify"]
+    },
+    {
       "preview": "https://github.com/rowaxl/TriPlanner/raw/master/overview.png",
       "title": "TriPlaner",
       "description": "Managing travel application with MERN Stack.",
@@ -31,14 +39,6 @@
       "URL": "",
       "repository": "https://github.com/rowaxl/shiories-client",
       "tags": ["Typescript", "React", "Material-UI", "PWA"]
-    },
-    {
-      "preview": "https://raw.githubusercontent.com/rowaxl/react-redux-test/master/overview.png",
-      "title": "React Redux Test",
-      "description": "Test bolierplate of React and Redux.",
-      "URL": "",
-      "repository": "https://github.com/rowaxl/react-redux-test",
-      "tags": ["Javascript", "React", "Test"]
     }
   ] 
 }

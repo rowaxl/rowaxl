@@ -1,9 +1,9 @@
 import React from 'react'
 import { Link, useLocation } from 'react-router-dom'
 
-export default () => {
+const Toolbar = () => {
   const links = ['home', 'about', 'portfolio', 'contact'];
-  const classes = 'link-text border-b-2 uppercase tracking-wide font-bold py-3 mr-8 ';
+  const classes = 'link-text border-b-2 uppercase tracking-wide font-bold py-3 mr-8 dark:text-gray-200 ';
   let { pathname } = useLocation();
 
   const renderLinks = () => (
@@ -25,3 +25,5 @@ export default () => {
     </nav>
   )
 }
+
+export default Toolbar

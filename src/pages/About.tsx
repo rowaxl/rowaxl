@@ -61,14 +61,14 @@ const skillLists: SkillItem[] = [
 const AboutPage = () => {
   return (
     <Container>
-      <p className="page-title text-4xl mx-12">
-        About me
+      <p className="page-title text-4xl mx-12 pt-4 dark:text-gray-100">
+        About Me: Wonjae Kim
       </p>
 
       <div className="flex flex-wrap m-12 about-col-wrap">
         <div className="w-full md:w-1/2 px-6">
           <PhotoCard
-            src={`${process.env.PUBLIC_URL}/img/about.png`}
+            src={`${process.env.PUBLIC_URL}/img/about.jpg`}
             alt="profile"
             showButtonText="Show My Story"
             hideButtonText="Hide Details"
@@ -91,9 +91,11 @@ const AboutPage = () => {
           </PhotoCard>
         </div>
         
-        <div className="w-full md:w-1/2 px-6 bg-gray-100 rounded">
+        <div className="w-full md:w-1/2 px-6 bg-gray-100 dark:bg-gray-700 rounded">
           <div className="border-l-4 border-blue-600 -ml-6 pl-6 flex items-center justify-between my-4">
-              <p className="text-2xl font-semibold text-gray-800">Skill Set</p>
+            <p className="text-2xl font-semibold text-gray-800 dark:text-gray-200">
+              Skill Set
+            </p>
           </div>
           <hr className="mx-auto" />
           {skillLists.map(s =>

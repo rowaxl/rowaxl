@@ -86,12 +86,16 @@ export const HomeMessage: FunctionComponent = () => {
 
   return (
     <div className="home-message-wrap">
-      <div className="greeting-message">
-        <h1>Hello, I'm Wonjae Kim.</h1>
-        <h3>I am developing Javascript / Typesciprt web applications!</h3>
+      <div className="greeting-message bg-gray-100 dark:bg-gray-700 px-6 py-4 bg-opacity-75">
+        <h1 className="text-blue-600 dark:text-blue-400">
+          Hello, I'm Wonjae Kim.
+        </h1>
+        <h3 className="text-blue-400 dark:text-blue-200">
+          I develop Javascript / Typesciprt web applications!
+        </h3>
       </div>
 
-      <TransitionGroup>
+      <TransitionGroup className="bg-transparent">
         <CSSTransition
           classNames="slide"
           timeout={{ enter: 3000, exit: 3000 }}
@@ -101,9 +105,13 @@ export const HomeMessage: FunctionComponent = () => {
         </CSSTransition>
       </TransitionGroup>
 
-      <div className="message-wrap">
-        <h1>What {renderTargets(weLabels)}B can do for {renderTargets(targetLabels)}{" "} ?</h1>
-        <h3>Let me help to find the solution!</h3>
+      <div className="message-wrap bg-gray-100 dark:bg-gray-800 bg-opacity-75 w-full pl-12 py-6">
+        <h1 className="dark:text-gray-200">
+          What {renderTargets(weLabels)}B can do for {renderTargets(targetLabels)}{" "} ?
+        </h1>
+        <h3  className="dark:text-gray-200">
+          Let me help to find the solution!
+        </h3>
       </div>
 
       

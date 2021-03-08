@@ -68,7 +68,7 @@ const snsList: SNSType[] = [
   }
 ]
 
-export default () => {
+const ContactPage = () => {
   const [formData, setFormData] = useState<ContactForm>(initialFormData)
   const [formValid, setFormValid] = useState(initialFormValid)
   const updateValid = useCallback((newValid) => {
@@ -281,16 +281,16 @@ export default () => {
     <Container>
       <ConfirmModal show={showModal} title={modalProps.title} onAction={modalProps.onAction} onClose={closeModal} />
 
-      <p className="page-title text-4xl mx-12">
+      <p className="page-title text-4xl mx-12 pt-4 dark:text-gray-100">
         Contact
       </p>
 
       <div className="flex flex-wrap m-12 about-col-wrap">
-        <div className="w-full px-6 bg-gray-200 rounded">
+        <div className="w-full px-6 bg-gray-200 dark:bg-gray-700 rounded">
           <form className="w-1/2 mx-auto my-4" onReset={resetContactForm}>
-            <p>
+            <p className="dark:text-gray-200">
               To keep in touch or talk about projects, fill up below form or send me an e-mail to
-              <span className="text-grey-600 font-bold">rowaxl0@gmail.com</span>
+              <span className="text-xl text-grey-600 dark:text-gray-100 font-bold mx-2">rowaxl0@gmail.com</span>
             </p>
             <div className="flex flex-wrap -mx-3 my-6">  
               {renderForm('fullName')}
@@ -304,7 +304,7 @@ export default () => {
                 type="submit"
                 onClick={submitContact}
               >
-                Submit
+                Send
               </button>
               <button
                 className="button-contact-form button-clear bg-gray-600 hover:bg-gray-400 border-gray-600 hover:border-gray-400 text-md border-4 text-white py-1 px-2 rounded"
@@ -316,8 +316,8 @@ export default () => {
           </form>
 
         </div>
-        <div className="w-full px-6 bg-gray-100 rounded">
-          <p className="text-xl my-4">
+        <div className="w-full px-6 bg-gray-100 dark:bg-transparent">
+          <p className="text-xl my-4 dark:text-gray-200">
             My Social Networks!
           </p>
           {renderSNS()}
@@ -326,3 +326,5 @@ export default () => {
     </Container>
   )
 }
+
+export default ContactPage

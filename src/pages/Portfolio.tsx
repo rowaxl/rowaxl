@@ -5,7 +5,7 @@ import { Spinner } from '../components/Spinner'
 import { getWorks } from '../apis/portfolio'
 import Work from '../interface/Work'
 
-export default () => {
+const PortfolioPage = () => {
   const [works, setWorks] = useState<Work[]>([])
 
   const getInitialWorks = useCallback(async () => {
@@ -28,7 +28,7 @@ export default () => {
 
     return works.map(work => (
       <div className="w-full lg:w-1/2 work-card my-4" key={work.title}>
-        <p className="text-2xl">
+        <p className="text-2xl dark:text-blue-200">
           {work.title}
         </p>
 
@@ -46,7 +46,7 @@ export default () => {
             {
               work.URL.length > 0 &&
               <button className="btn-url text-base">
-                  <a href={work.URL} target="_blank" rel="noopener noreferrer">Open App</a>
+                  <a href={work.URL} target="_blank" rel="noopener noreferrer">Live Demo</a>
               </button>
             }
 
@@ -65,11 +65,11 @@ export default () => {
 
   return (
     <Container>
-      <p className="page-title text-4xl mx-12">
+      <p className="page-title text-4xl mx-12 pt-4 dark:text-gray-100">
         Portfolio
       </p>
 
-      <div className="work-wrap">
+      <div className="work-wrap shadow-inner">
         <div className="flex flex-wrap justify-between">
           {renderWorks()}
         </div>
@@ -77,3 +77,5 @@ export default () => {
     </Container>
   )
 }
+
+export default PortfolioPage
