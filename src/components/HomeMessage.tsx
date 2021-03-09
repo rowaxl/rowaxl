@@ -106,12 +106,12 @@ export const HomeMessage: FunctionComponent = () => {
       </TransitionGroup>
 
       <div className="message-wrap bg-gray-100 dark:bg-gray-800 bg-opacity-75 w-full pl-12 py-6">
-        <h1 className="dark:text-gray-200">
+        <p className="dark:text-gray-200 text-md md:text-2xl">
           What {renderTargets(weLabels)}B can do for {renderTargets(targetLabels)}{" "} ?
-        </h1>
-        <h3  className="dark:text-gray-200">
+        </p>
+        <p className="dark:text-gray-200 text-sm md:text-xl">
           Let me help to find the solution!
-        </h3>
+        </p>
       </div>
 
       
