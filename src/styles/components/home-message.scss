@@ -28,21 +28,13 @@
 
 .home-message-wrap {
   width: 100%;
-  min-height: 540px;
-  height: 85vh;
+  min-height: 320px;
+  height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   position: relative;
   background: transparent;
-}
-
-.home-message-wrap h1 {
-  font-size: 2em;
-}
-
-.home-message-wrap h3 {
-  font-size: 1.7em;
 }
 
 .message-wrap {
@@ -53,11 +45,32 @@
 
 .home-image {
   width: 100%;
-  height: 85vh;
+  height: 100%;
   position: absolute;
   top:0;
   left:0;
   border-radius: 0.5rem;
+}
+
+@media only screen and (max-width: 1024px) {
+  .home-image {
+    object-fit: contain;
+    height: auto;
+  }
+
+  .greeting-message {
+    margin: 0;
+    border-radius: 0;
+  }
+
+  .message-wrap {
+    position: relative;
+    text-align: center;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 }
 
 /* home-image animation*/

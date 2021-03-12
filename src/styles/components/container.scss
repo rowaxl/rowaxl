@@ -1,4 +1,4 @@
 .conatiner-fit-height {
-  height: 85vh;
-  min-height: 600px;
+  height: calc(100% - 70px);
+  min-height: 400px;
 }

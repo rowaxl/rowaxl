@@ -61,11 +61,11 @@ export const HomeMessage: FunctionComponent = () => {
 
   useEffect(() => {
     const changeTarget = setInterval(() => {
-      if (i >= targets.length - 1) {
-        i = 0
-      } else {
-        i++
-      }
+      // if (i >= targets.length - 1) {
+      //   i = 0
+      // } else {
+      //   i++
+      // }
 
       setTarget(targets[i])
     }, 3000)
@@ -86,16 +86,7 @@ export const HomeMessage: FunctionComponent = () => {
 
   return (
     <div className="home-message-wrap">
-      <div className="greeting-message bg-gray-100 dark:bg-gray-700 px-6 py-4 bg-opacity-75">
-        <h1 className="text-blue-600 dark:text-blue-400">
-          Hello, I'm Wonjae Kim.
-        </h1>
-        <h3 className="text-blue-400 dark:text-blue-200">
-          I develop Javascript / Typesciprt web applications!
-        </h3>
-      </div>
-
-      <TransitionGroup className="bg-transparent">
+      <TransitionGroup>
         <CSSTransition
           classNames="slide"
           timeout={{ enter: 3000, exit: 3000 }}
@@ -105,16 +96,23 @@ export const HomeMessage: FunctionComponent = () => {
         </CSSTransition>
       </TransitionGroup>
 
-      <div className="message-wrap bg-gray-100 dark:bg-gray-800 bg-opacity-75 w-full pl-12 py-6">
-        <p className="dark:text-gray-200 text-md md:text-2xl">
-          What {renderTargets(weLabels)}B can do for {renderTargets(targetLabels)}{" "} ?
-        </p>
-        <p className="dark:text-gray-200 text-sm md:text-xl">
-          Let me help to find the solution!
-        </p>
+      <div className="greeting-message bg-gray-100 dark:bg-gray-700 px-6 py-4 bg-opacity-75">
+        <h1 className="text-blue-600 dark:text-blue-400 text-2xl md:text-4xl">
+          Hello, I'm Wonjae Kim.
+        </h1>
+        <h3 className="text-blue-400 dark:text-blue-200 text-lg md:text-xl">
+          I develop Javascript / Typesciprt web applications!
+        </h3>
       </div>
 
-      
+      <div className="message-wrap bg-gray-100 dark:bg-gray-700 bg-opacity-75 w-full mx-auto">
+        <div className="dark:text-gray-200 text-md md:text-2xl">
+          What {renderTargets(weLabels)}B can do for {renderTargets(targetLabels)}{" "} ?
+        </div>
+        <div className="dark:text-gray-200 text-sm md:text-xl">
+          Let's find our solutions!
+        </div>
+      </div>
     </div>
   )
 }
