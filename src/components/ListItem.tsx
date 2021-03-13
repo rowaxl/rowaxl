@@ -9,8 +9,8 @@ type ListItemProps = {
 export const ListItem: FunctionComponent<ListItemProps> = ({ label, iconSrc, iconAlt, children }) => {
   return (
     <div className="flex items-center my-4">
-      <div className="w-16">
-        <img className="w-12 h-12 rounded dark:bg-gray-200 rounded my-2 p-2" src={`${process.env.PUBLIC_URL}/img/${iconSrc}`} alt={iconAlt} />
+      <div className="w-8 md:w-16">
+        <img className="w-6 h-6 md:w-12 md:h-12 rounded dark:bg-gray-200 rounded my-2 p-2" src={`${process.env.PUBLIC_URL}/img/${iconSrc}`} alt={iconAlt} />
       </div>
 
       <div className="flex-1 pl-2">

@@ -130,7 +130,7 @@ const ContactPage = () => {
     <button className={`button-sns ${contact.type} mx-4 py-2 px-4 rounded`} key={contact.type}>
       <a className="font-bold text-white inline-flex items-center" href={contact.href} target="_blank" rel="noopener noreferrer">
         <img className="w-8 h-8 mr-2" src={`${process.env.PUBLIC_URL}/img/${contact.img}`} alt={contact.type} />
-        <span>
+        <span className="hidden md:block">
           {contact.value}
         </span>
       </a>
@@ -281,18 +281,20 @@ const ContactPage = () => {
     <Container>
       <ConfirmModal show={showModal} title={modalProps.title} onAction={modalProps.onAction} onClose={closeModal} />
 
-      <p className="page-title text-4xl mx-12 pt-4 dark:text-gray-100">
-        Contact
-      </p>
+      <div className="border-l-4 border-blue-600 pl-6 mx-4 md:mx-12 flex items-center justify-between my-4">
+        <p className="text-2xl font-semibold md:text-4xl w-full dark:text-gray-100">
+          Contact me!
+        </p>
+      </div>
 
-      <div className="flex flex-wrap m-12 about-col-wrap">
+      <div className="flex flex-wrap mt-2 lg:m-12 about-col-wrap">
         <div className="w-full px-6 bg-gray-200 dark:bg-gray-700 rounded">
-          <form className="w-1/2 mx-auto my-4" onReset={resetContactForm}>
+          <form className="md:w-1/2 mx-auto my-4" onReset={resetContactForm}>
             <p className="dark:text-gray-200">
               To keep in touch or talk about projects, fill up below form or send me an e-mail to
               <span className="text-xl text-grey-600 dark:text-gray-100 font-bold mx-2">rowaxl0@gmail.com</span>
             </p>
-            <div className="flex flex-wrap -mx-3 my-6">  
+            <div className="flex flex-wrap -mx-3 my-2 md:my-6">  
               {renderForm('fullName')}
               {renderForm('emailAddress')}
             </div>
@@ -316,9 +318,9 @@ const ContactPage = () => {
           </form>
 
         </div>
-        <div className="w-full px-6 bg-gray-100 dark:bg-transparent">
+        <div className="w-full px-6 py-4 bg-gray-100 dark:bg-transparent">
           <p className="text-xl my-4 dark:text-gray-200">
-            My Social Networks!
+            Social Networks
           </p>
           {renderSNS()}
         </div>

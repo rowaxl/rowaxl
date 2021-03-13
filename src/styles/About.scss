@@ -7,6 +7,22 @@
   }
 }
 
+.skills-wrap {
+  max-height: calc(70vh - 50px);
+  overflow-y: scroll;
+}
+
+@media only screen and (max-width: 1024px) {
+  .about-col-wrap {
+    height: calc(100vh - 250px);
+    min-height: 300px;
+  }
+
+  .skills-wrap {
+    max-height: 200px;
+  }
+}
+
 .skills-slide {
   animation-fill-mode: forwards;
 }

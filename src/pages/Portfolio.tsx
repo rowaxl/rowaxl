@@ -33,7 +33,7 @@ const PortfolioPage = () => {
         </p>
 
         <PhotoCard
-          src={work.preview}
+          src={work.isPreviewInPublic ? `${process.env.PUBLIC_URL}/img/${work.preview}`: work.preview}
           alt={work.title}
           showButtonText="Show Detail"
           hideButtonText="Hide Detail"
@@ -50,9 +50,13 @@ const PortfolioPage = () => {
               </button>
             }
 
-            <button className="btn-repository text-base">
+            {
+              work.repository.length > 0 &&
+              <button className="btn-repository text-base">
                 <a href={work.repository} target="_blank" rel="noopener noreferrer">Open Repository</a>
-            </button>
+              </button>
+            }
+
           </div>
         </PhotoCard>
 
@@ -65,9 +69,11 @@ const PortfolioPage = () => {
 
   return (
     <Container>
-      <p className="page-title text-4xl mx-12 pt-4 dark:text-gray-100">
-        Portfolio
-      </p>
+      <div className="border-l-4 border-blue-600 pl-6 mx-4 md:mx-12 flex items-center justify-between my-4">
+        <p className="text-2xl font-semibold md:text-4xl w-full dark:text-gray-100">
+          Works
+        </p>
+      </div>
 
       <div className="work-wrap shadow-inner">
         <div className="flex flex-wrap justify-between">

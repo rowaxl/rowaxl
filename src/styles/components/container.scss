@@ -1,4 +1,12 @@
 .conatiner-fit-height {
-  height: calc(100% - 70px);
+  height: calc(100vh - 140px);
   min-height: 400px;
+}
+
+@media only screen and (max-width: 1024px) {
+  .conatiner-fit-height {
+    height: calc(100vh - 140px);
+    min-height: 320px;
+    overflow-y: scroll;
+  }
 }

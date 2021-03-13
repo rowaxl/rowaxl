@@ -41,6 +41,10 @@
   position: absolute;
   bottom: 0%;
   height: 20%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .home-image {
@@ -67,9 +71,7 @@
     position: relative;
     text-align: center;
     height: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    justify-content: flex-start;
   }
 }
 

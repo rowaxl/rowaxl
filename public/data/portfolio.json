@@ -11,15 +11,16 @@
     {
       "preview": "https://raw.githubusercontent.com/rowaxl/simple-scrum-board/master/public/overview.png",
       "title": "Simple scrum board",
-      "description": "React based simple task board web application",
+      "description": "React based simple task board with react-beautiful-dnd",
       "URL": "https://simple-scrum-board.vercel.app/",
       "repository": "https://github.com/rowaxl/simple-scrum-board",
       "tags": ["Javascript", "React", "Material-UI"]
     },
     {
-      "preview": "https://raw.githubusercontent.com/rowaxl/shiories-client/master/overview.png",
+      "preview": "Blvd86logo.png",
+      "isPreviewInPublic": "true",
       "title": "BLVD86",
-      "description": "  Apperel EC Site builded with gatsby.js and Shopify",
+      "description": "Apperel EC Site builded with gatsby.js and Shopify",
       "URL": "https://blvd86.com/",
       "repository": "",
       "tags": ["React", "Gatsby", "Shopify"]
@@ -27,18 +28,10 @@
     {
       "preview": "https://github.com/rowaxl/TriPlanner/raw/master/overview.png",
       "title": "TriPlaner",
-      "description": "Managing travel application with MERN Stack.",
+      "description": "Managing travel application with MERN stack.",
       "URL": "",
       "repository": "https://github.com/rowaxl/triplanner",
-      "tags": ["Javascript", "React", "CSS", "Material-UI", "Node.js", "MongoDB"]
-    },
-    {
-      "preview": "https://raw.githubusercontent.com/rowaxl/shiories-client/master/overview.png",
-      "title": "The Shiories",
-      "description": "Typescript and React based bookmark application.",
-      "URL": "",
-      "repository": "https://github.com/rowaxl/shiories-client",
-      "tags": ["Typescript", "React", "Material-UI", "PWA"]
+      "tags": ["React", "Material-UI", "Node.js", "MongoDB"]
     }
   ] 
 }

@@ -61,12 +61,14 @@ const skillLists: SkillItem[] = [
 const AboutPage = () => {
   return (
     <Container>
-      <p className="page-title text-4xl mx-12 pt-4 dark:text-gray-100">
-        About Me: Wonjae Kim
-      </p>
+      <div className="border-l-4 border-blue-600 pl-6 mx-4 md:mx-12 flex items-center justify-between my-4">
+        <p className="text-2xl font-semibold md:text-4xl w-full dark:text-gray-100">
+          About Me: Wonjae Kim
+        </p>
+      </div>
 
-      <div className="flex flex-wrap m-12 about-col-wrap">
-        <div className="w-full md:w-1/2 px-6">
+      <div className="flex flex-wrap m-4 md:m-auto about-col-wrap">
+        <div className="w-full md:w-1/2 md:px-6">
           <PhotoCard
             src={`${process.env.PUBLIC_URL}/img/about.jpg`}
             alt="profile"
@@ -83,7 +85,10 @@ const AboutPage = () => {
               Currently based on Vancouver, Canada.
             </h5>
             <h5>
-              Experience: MERN stacks with AWS / Azure / Firebase
+              Developing MERN stacks applications
+            </h5>
+            <h5>
+              With Cloud SaaSs: AWS / Azure / Firebase
             </h5>
             <h5>
               Values: Self-learning, resiliency, and deligent.
@@ -93,19 +98,22 @@ const AboutPage = () => {
         
         <div className="w-full md:w-1/2 px-6 bg-gray-100 dark:bg-gray-700 rounded">
           <div className="border-l-4 border-blue-600 -ml-6 pl-6 flex items-center justify-between my-4">
-            <p className="text-2xl font-semibold text-gray-800 dark:text-gray-200">
+            <p className="text-2xl text-gray-800 dark:text-gray-200">
               Skill Set
             </p>
           </div>
           <hr className="mx-auto" />
-          {skillLists.map(s =>
-            <SkillList
-              key={s.title}
-              skillLabel={s.title}
-              iconSrc={s.iconSrc}
-              iconAlt={s.iconAlt}
-            />)
-          }
+
+          <div className="skills-wrap">
+            {skillLists.map(s =>
+              <SkillList
+                key={s.title}
+                skillLabel={s.title}
+                iconSrc={s.iconSrc}
+                iconAlt={s.iconAlt}
+              />)
+            }
+          </div>
         </div>
       </div>
     </Container>

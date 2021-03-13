@@ -83,3 +83,9 @@ textarea.contact-description {
   resize: none;
   overflow-y: scroll;
 }
+
+@media only screen and (max-width: 1024px) {
+  .button-sns {
+    width: 70px;
+  }
+}

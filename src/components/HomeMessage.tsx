@@ -61,11 +61,11 @@ export const HomeMessage: FunctionComponent = () => {
 
   useEffect(() => {
     const changeTarget = setInterval(() => {
-      // if (i >= targets.length - 1) {
-      //   i = 0
-      // } else {
-      //   i++
-      // }
+      if (i >= targets.length - 1) {
+        i = 0
+      } else {
+        i++
+      }
 
       setTarget(targets[i])
     }, 3000)
@@ -100,16 +100,16 @@ export const HomeMessage: FunctionComponent = () => {
         <h1 className="text-blue-600 dark:text-blue-400 text-2xl md:text-4xl">
           Hello, I'm Wonjae Kim.
         </h1>
-        <h3 className="text-blue-400 dark:text-blue-200 text-lg md:text-xl">
+        <h3 className="text-blue-400 dark:text-blue-200 text-lg md:text-2xl">
           I develop Javascript / Typesciprt web applications!
         </h3>
       </div>
 
       <div className="message-wrap bg-gray-100 dark:bg-gray-700 bg-opacity-75 w-full mx-auto">
-        <div className="dark:text-gray-200 text-md md:text-2xl">
+        <div className="dark:text-gray-200 text-md md:text-3xl">
           What {renderTargets(weLabels)}B can do for {renderTargets(targetLabels)}{" "} ?
         </div>
-        <div className="dark:text-gray-200 text-sm md:text-xl">
+        <div className="dark:text-gray-200 text-sm md:text-2xl">
           Let's find our solutions!
         </div>
       </div>

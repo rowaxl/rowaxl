@@ -13,6 +13,7 @@
   height: 35vh;
   max-height: 900px;
   padding: 10px 20px;
+  min-height: 400px;
 
   .photo-card-wrap {
     height: 70%;
@@ -31,7 +32,7 @@
 }
 
 .btn-url {
-  background-color: #689df9;
+  background-color: #1b9b20;
   padding: 10px 5px;
   border-radius: 5px;
   position: relative;
@@ -39,7 +40,7 @@
 }
 
 .btn-repository {
-  background-color: #5ab664;
+  background-color: #1b9b20;
   padding: 10px 5px;
   border-radius: 5px;
   position: relative;
@@ -61,9 +62,14 @@
   margin: 5px 10px 0 0;
 }
 
-@media only screen and (min-width: 1024px) {
+@media only screen and (max-width: 1024px) {
   .work-card {
-    min-height: 400px;
+    height: 250px;
+    padding: 0;
+  }
+
+  .work-wrap {
+    width: 100%;
   }
 }
 

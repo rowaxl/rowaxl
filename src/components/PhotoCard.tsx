@@ -11,6 +11,8 @@ type PhotoCardProps = {
 export const PhotoCard: FunctionComponent<PhotoCardProps> =
   ({ src, alt, showButtonText, hideButtonText, children }) => {
 
+    console.log({ src })
+
   const [showChildren, setShowChildren] = useState(false)
   const toggleShowChildren = () => setShowChildren(!showChildren)
 
