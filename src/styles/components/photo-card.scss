@@ -2,10 +2,12 @@
   position: relative;
   width: 100%;
   height: 100%;
+  max-width: 400px;
   min-height: 300px;
-  max-height: 450px;
+  max-height: 500px;
   display: flex;
   flex-direction: column;
+  margin: auto;
 
   .float-button {
     bottom: 10px;
@@ -84,3 +86,9 @@
     width: 100%;
   }
 } 
+
+@media only screen and (max-width: 1024px) {
+  .photo-card-wrap {
+    max-height: 450px;
+  }
+}

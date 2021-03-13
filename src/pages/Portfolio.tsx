@@ -69,7 +69,7 @@ const PortfolioPage = () => {
 
   return (
     <Container>
-      <div className="border-l-4 border-blue-600 pl-6 mx-4 md:mx-12 flex items-center justify-between my-4">
+      <div className="border-l-4 border-blue-600 pl-6 mx-4 mt-4 md:mx-12 flex items-center justify-between my-4">
         <p className="text-2xl font-semibold md:text-4xl w-full dark:text-gray-100">
           Works
         </p>

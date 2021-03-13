@@ -61,14 +61,14 @@ const skillLists: SkillItem[] = [
 const AboutPage = () => {
   return (
     <Container>
-      <div className="border-l-4 border-blue-600 pl-6 mx-4 md:mx-12 flex items-center justify-between my-4">
+      <div className="border-l-4 border-blue-600 pl-6 mx-4 mt-4 md:mx-12 flex items-center justify-between my-4">
         <p className="text-2xl font-semibold md:text-4xl w-full dark:text-gray-100">
           About Me: Wonjae Kim
         </p>
       </div>
 
       <div className="flex flex-wrap m-4 md:m-auto about-col-wrap">
-        <div className="w-full md:w-1/2 md:px-6">
+        <div className="w-full lg:w-1/2 md:px-6">
           <PhotoCard
             src={`${process.env.PUBLIC_URL}/img/about.jpg`}
             alt="profile"
