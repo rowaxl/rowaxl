@@ -1,14 +1,6 @@
 {
   "portpolios": [
     {
-      "preview": "https://github.com/rowaxl/100daysofcode/blob/master/next_ghost/overview.png?raw=true",
-      "title": "Blaze Blog",
-      "description": "Next.js frontend + Ghost backend blog application",
-      "URL": "https://next-ghost.rowaxl.vercel.app/",
-      "repository": "https://github.com/rowaxl/100daysofcode/tree/master/next_ghost",
-      "tags": ["Next.js", "React", "Typescript", "Ghost"]
-    },
-    {
       "preview": "https://raw.githubusercontent.com/rowaxl/simple-scrum-board/master/public/overview.png",
       "title": "Simple scrum board",
       "description": "React based simple task board with react-beautiful-dnd",
@@ -26,12 +18,20 @@
       "tags": ["React", "Gatsby", "Shopify"]
     },
     {
-      "preview": "https://github.com/rowaxl/TriPlanner/raw/master/overview.png",
-      "title": "TriPlaner",
-      "description": "Managing travel application with MERN stack.",
-      "URL": "",
-      "repository": "https://github.com/rowaxl/triplanner",
-      "tags": ["React", "Material-UI", "Node.js", "MongoDB"]
+      "preview": "https://github.com/rowaxl/100daysofcode/blob/master/next_ghost/overview.png?raw=true",
+      "title": "Blaze Blog",
+      "description": "Next.js frontend + Ghost backend blog application for lighthouse full score",
+      "URL": "https://next-ghost.rowaxl.vercel.app/",
+      "repository": "https://github.com/rowaxl/nextjs-ghost-blog",
+      "tags": ["Next.js", "Ghost"]
+    },
+    {
+      "preview": "https://github.com/rowaxl/weather-dashboard/blob/main/overview.png?raw=true",
+      "title": "Weather Dashboard",
+      "description": "Glassmorphism weather dashboard with tailwindcss",
+      "URL": "https://weather-dashboard-two.vercel.app/",
+      "repository": "https://github.com/rowaxl/weather-dashboard",
+      "tags": ["Javascript", "Next.js", "Tailwind CSS", "Glassmorphism"]
     }
   ] 
 }
