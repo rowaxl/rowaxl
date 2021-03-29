@@ -28,9 +28,10 @@
     "react-text-loop": "^2.3.0",
     "react-transition-group": "^4.4.1",
     "sass": "^1.26.10",
-    "styled-components": "^5.1.1",
+    "styled-components": "^5.2.1",
     "tailwindcss": "npm:@tailwindcss/postcss7-compat",
-    "typescript": "~3.7.2"
+    "typescript": "~3.7.2",
+    "webpack": "5"
   },
   "scripts": {
     "start": "concurrently yarn:start:*",
