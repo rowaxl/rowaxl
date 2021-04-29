@@ -30,8 +30,7 @@
     "sass": "^1.26.10",
     "styled-components": "^5.2.1",
     "tailwindcss": "npm:@tailwindcss/postcss7-compat",
-    "typescript": "~3.7.2",
-    "webpack": "5"
+    "typescript": "~3.7.2"
   },
   "scripts": {
     "start": "concurrently yarn:start:*",
