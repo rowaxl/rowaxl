@@ -2,6 +2,14 @@
   "portpolios": [
     {
       "preview": "https://raw.githubusercontent.com/rowaxl/simple-scrum-board/master/public/overview.png",
+      "title": "The Economizer",
+      "description": "Full-Stack MERN stack budget application with charts",
+      "URL": "https://the-economizer-rowaxl.vercel.app/",
+      "repository": "https://github.com/rowaxl/simple-scrum-board",
+      "tags": ["Javascript", "React", "Tailwind CSS", "Node.js", "D3"]
+    },
+    {
+      "preview": "https://raw.githubusercontent.com/rowaxl/simple-scrum-board/master/public/overview.png",
       "title": "Simple scrum board",
       "description": "React based simple task board with react-beautiful-dnd",
       "URL": "https://simple-scrum-board.vercel.app/",

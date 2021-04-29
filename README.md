@@ -1,15 +1,21 @@
 # Overview
 
 ## Name
-- Wonjae Kim(rowaxl)
+Wonjae Kim(rowaxl)
 
 ## Location
-- Vancouver, BC(PDT)
+Burnaby, BC(PDT)
 
 ## Current position
-- Parttime Student of CICCC
+- Full Stack developer of OPT in Tokyo
+- Student of Cornerstone International Community College of Canada (Web and Mobile Development Course)
 
 ## Skills
-- React / Vue.js
+- React, Next.js for SSR, SSG
 - Node.js
 - AWS / Azure
+- Redux
+- Typescript
+- MongoDB
+- MySQL
+- Serverless
