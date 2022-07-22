@@ -4,7 +4,7 @@
 Wonjae Kim(rowaxl)
 
 ## Location
-Burnaby, BC(PDT)
+Seoul, Korea(KST)
 
 ## Current position
 - Full Stack developer of OPT in Tokyo
