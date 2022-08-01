@@ -7,7 +7,7 @@ Wonjae Kim(rowaxl)
 Seoul, Korea(KST)
 
 ## Current position
-- Full Stack developer of OPT in Tokyo
+- Frontend developer of Yumemi
 - Student of Cornerstone International Community College of Canada (Web and Mobile Development Course)
 
 ## Skills
