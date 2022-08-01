@@ -16,7 +16,7 @@
     "@types/react-router-dom": "^5.1.5",
     "@types/react-transition-group": "^4.4.0",
     "@types/styled-components": "^5.1.2",
-    "axios": "^0.21.1",
+    "axios": "^0.21.2",
     "emailjs-com": "^2.6.3",
     "postcss": "^7",
     "postcss-preset-env": "^6.7.0",
