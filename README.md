@@ -4,7 +4,7 @@
 Wonjae Kim(rowaxl)
 
 ## Location
-Seoul, Korea(KST)
+Nishinomiya, Japan(JST)
 
 ## Current position
 - Frontend developer of Yumemi
